@@ -1,26 +1,229 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --font-sans: var(--font-poppins);
+  --font-poppins: var(--font-poppins);
+  --font-outfit: var(--font-outfit);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-primary: #133A7D;
+  --color-primary-dark: #0E2D66;
+  --color-primary-light: #84B7CA;
+  --color-secondary: #1E293B;
+  --color-accent: #F8BF3C;
+  --color-accent-hover: #FCB900;
+  --color-text-dark: #1E2B3A;
+  --color-text-medium: #2C3E50;
+  --color-text-muted: #3D4145;
+  --color-bg-cream: #FFFAEE;
+  --color-bg-light-blue: #EFFAFD;
+  --color-bg-blue-mist: #F2FAFA;
+  --color-border: #E1E2E2;
+  --color-border-light: #CCCED0;
+
+  --animate-known-from-marquee: known-from-marquee 20s linear infinite;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-poppins);
+  color: var(--color-text-dark);
+  background: #ffffff;
+}
+
+/* Floating bubble animations matching original site */
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes floatCircle {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(6px, -8px); }
+  50% { transform: translate(0, -12px); }
+  75% { transform: translate(-6px, -8px); }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+@keyframes wobbleSoft {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  25% { transform: translate3d(1px, -4px, 0) rotate(-1deg); }
+  50% { transform: translate3d(-2px, -7px, 0) rotate(0.8deg); }
+  75% { transform: translate3d(2px, -3px, 0) rotate(-0.5deg); }
+}
+
+@keyframes wobbleDrift {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  20% { transform: translate3d(-2px, -3px, 0) scale(1.01); }
+  55% { transform: translate3d(2px, -8px, 0) scale(0.995); }
+  80% { transform: translate3d(-1px, -4px, 0) scale(1.005); }
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* WhatsApp floating button pulse */
+@keyframes pulse-ring {
+  0% { transform: scale(0.8); opacity: 0.5; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+
+/* Map pin animations (Erfahrungen page) — matches Elementor hotspot */
+@keyframes mapPinHalo {
+  0%, 100% { transform: translate(-50%, -50%) scale(0.92); opacity: 0.58; }
+  50% { transform: translate(-50%, -50%) scale(1.12); opacity: 0.36; }
+}
+
+@keyframes mapPinBeam {
+  0% { transform: translate(-50%, -50%) scale(0.5); opacity: 1; }
+  100% { transform: translate(-50%, -50%) scale(1.5); opacity: 0; }
+}
+
+.animate-mapPinHalo {
+  animation: mapPinHalo 2.2s ease-in-out infinite;
+  animation-delay: var(--pin-delay, 0ms);
+}
+
+.animate-mapPinBeam {
+  animation: mapPinBeam 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  animation-delay: var(--pin-delay, 0ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-mapPinHalo,
+  .animate-mapPinBeam {
+    animation: none;
+  }
+
+  .animate-mapPinHalo {
+    opacity: 0.44;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .animate-mapPinBeam {
+    opacity: 0.62;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes known-from-marquee {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
+
+/* =============================================
+   Vorteilsrechner: non-Tailwind-able styles
+   ============================================= */
+
+/* Input spin button removal */
+.vr-input { -moz-appearance: textfield; appearance: textfield; }
+.vr-input::-webkit-outer-spin-button,
+.vr-input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+
+/* Name input placeholder */
+.vr-name-input::placeholder { color: var(--color-text-muted, #6C757E); opacity: 1; }
+
+/* Toggle switch (requires pseudo-elements and :checked combinator) */
+.slider-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.slider-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider-switch-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.slider-switch-slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.slider-switch input:checked + .slider-switch-slider {
+  background-color: #2196F3;
+}
+
+.slider-switch input:checked + .slider-switch-slider:before {
+  transform: translateX(26px);
+}
+
+/* noUiSlider overrides */
+.noUi-connect {
+  background: rgba(132, 183, 202, 0.5) !important;
+}
+
+.noUi-marker {
+  display: none;
+}
+
+.noUi-pips-horizontal {
+  padding: 0;
+}
+
+/* Timeline: bullet pseudo-element */
+.kw-bullet li { padding-left: 24px; position: relative; }
+.kw-bullet li::before { content: "\2022"; position: absolute; left: 0; }
+
+/* Timeline: lightbulb mask icon (mobile) */
+.kw-lamp-icon::after {
+  content: "";
+  width: 28px;
+  height: 28px;
+  background-color: #000;
+  -webkit-mask: url(/images/die-gluhbirne.png) no-repeat center;
+  mask: url(/images/die-gluhbirne.png) no-repeat center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+/* Timeline: lightbulb mask icon (desktop) */
+.kw-lamp-icon-lg::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  -webkit-mask: url(/images/die-gluhbirne.png) no-repeat center;
+  mask: url(/images/die-gluhbirne.png) no-repeat center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+/* Timeline: mobile age/capital positional styling */
+.kw-age-capital-mobile p { margin: 0; }
+.kw-age-capital-mobile p:first-child {
+  font-family: var(--font-poppins), 'Poppins', sans-serif;
+  font-size: 18px; font-weight: 500; line-height: normal; color: #4B5563;
+}
+.kw-age-capital-mobile p:last-child {
+  font-family: var(--font-poppins), 'Poppins', sans-serif;
+  font-size: 22px; font-weight: 700; line-height: normal; color: #2C3E50;
+}
+.kw-age-capital-mobile p:last-child.capital-expression {
+  font-size: 18px; font-weight: 500;
 }
