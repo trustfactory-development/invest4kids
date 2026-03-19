@@ -46,7 +46,7 @@ const navLinks: NavLink[] = [
     ],
   },
   { label: "Impressum", href: "https://invest4kids.de/impressum/" },
-  { label: "Datenschutz", href: "https://invest4kids.de/datenschutz/" },
+  { label: "Datenschutz", href: "/datenschutz" },
   { label: "Transparenz", href: "https://invest4kids.de/transparenz/" },
   {
     label: "Studie zum Finanzverhalten junger Erwachsener",
