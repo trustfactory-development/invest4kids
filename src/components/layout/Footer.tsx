@@ -2,10 +2,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 
+type NavChild = {
+  label: string;
+  href: string;
+};
+
 type NavLink = {
   label: string;
   href: string;
   hasArrow?: boolean;
+  children?: NavChild[];
   spanClass?: string;
 };
 
@@ -23,11 +29,21 @@ const navLinks: NavLink[] = [
     label: "Über Uns",
     href: "https://invest4kids.de/ueber-uns/",
     hasArrow: true,
+    children: [
+      { label: "Über Uns", href: "https://invest4kids.de/ueber-uns/" },
+      { label: "Team", href: "https://invest4kids.de/team/" },
+    ],
   },
   {
     label: "Beratung",
     href: "https://invest4kids.de/beratung/",
     hasArrow: true,
+    children: [
+      { label: "Beratung", href: "https://invest4kids.de/beratung/" },
+      { label: "Invest4Kids Konzept", href: "https://invest4kids.de/invest4kids-konzept/" },
+      { label: "Erfahrungen", href: "https://invest4kids.de/erfahrungen/" },
+      { label: "Individueller Rechner", href: "https://invest4kids.de/vorteilsrechner/" },
+    ],
   },
   { label: "Impressum", href: "https://invest4kids.de/impressum/" },
   { label: "Datenschutz", href: "https://invest4kids.de/datenschutz/" },
@@ -101,10 +117,10 @@ export default function Footer() {
                 </h2>
                 <nav>
                   <ul className="m-0 grid w-full grid-cols-4 p-0 md:grid-cols-6 lg:flex lg:w-auto lg:flex-wrap lg:justify-start ">
-                    {navLinks.map(({ label, href, hasArrow, spanClass }) => (
+                    {navLinks.map(({ label, href, hasArrow, children, spanClass }) => (
                         <li
                             key={label}
-                            className={`${spanClass ?? "col-span-1"} px-[17px] py-3 text-center lg:w-auto lg:px-3 lg:text-left`}
+                            className={`${spanClass ?? "col-span-1"} group/nav relative px-[17px] py-3 text-center lg:w-auto lg:px-3 lg:text-left`}
                         >
                           <Link
                               href={href}
@@ -112,9 +128,25 @@ export default function Footer() {
                           >
                             <span>{label}</span>
                             {hasArrow ? (
-                                <ChevronDown className="h-4 w-4" strokeWidth={1.8} />
+                                <ChevronDown className="h-4 w-4 transition-transform group-hover/nav:rotate-180" strokeWidth={1.8} />
                             ) : null}
                           </Link>
+                          {children && (
+                            <div className="invisible absolute top-full left-1/2 z-10 -translate-x-1/2 pt-2 opacity-0 transition-all group-hover/nav:visible group-hover/nav:opacity-100 lg:left-0 lg:translate-x-0">
+                              <ul className="min-w-max rounded-lg bg-white py-2 shadow-[0_4px_20px_rgba(0,0,0,0.1)]">
+                                {children.map((child) => (
+                                  <li key={child.href}>
+                                    <Link
+                                      href={child.href}
+                                      className="block px-5 py-2 font-outfit text-[13px] leading-[18px] font-normal text-text-medium transition-colors hover:text-accent-hover"
+                                    >
+                                      {child.label}
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
                         </li>
                     ))}
                   </ul>

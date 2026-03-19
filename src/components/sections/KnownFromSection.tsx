@@ -53,25 +53,18 @@ export default function KnownFromSection() {
           }}
         >
           <div className="animate-known-from-marquee flex will-change-transform group-hover:[animation-play-state:paused]">
-            {[0, 1].map((setIdx) => (
+            {trackLogos.map((logo, index) => (
               <div
-                key={setIdx}
-                className="flex shrink-0 items-center py-2"
+                className="relative mx-3 flex h-12 w-[122px] flex-none items-center justify-center md:mx-4 md:h-14 md:w-[150px] lg:w-[170px]"
+                key={`${index}`}
               >
-                {trackLogos.map((logo, index) => (
-                  <div
-                    className="relative mx-3 flex h-12 w-[122px] flex-none items-center justify-center md:mx-4 md:h-14 md:w-[150px] lg:w-[170px]"
-                    key={`${setIdx}-${index}`}
-                  >
-                    <Image
-                      src={logo.src}
-                      alt={logo.alt}
-                      width={logo.width}
-                      height={logo.height}
-                      className="h-full w-auto object-contain opacity-50 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
-                    />
-                  </div>
-                ))}
+                <Image
+                  src={logo.src}
+                  alt={logo.alt}
+                  width={logo.width}
+                  height={logo.height}
+                  className="h-full w-auto object-contain opacity-50 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
+                />
               </div>
             ))}
           </div>

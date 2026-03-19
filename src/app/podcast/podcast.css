@@ -1,0 +1,755 @@
+/* Podcast page styles — extracted from the original Elementor HTML */
+
+/* ── Section wrappers ───────────────────────────────────────── */
+.pc-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.pc-section-inner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1100px;
+  box-sizing: border-box;
+}
+
+/* ── Section 1: Hero ────────────────────────────────────────── */
+.pc-hero {
+  background-color: #EFFAFD;
+  padding: 100px 30px 150px;
+  overflow: hidden;
+}
+
+.pc-hero .pc-section-inner {
+  justify-content: center;
+}
+
+.pc-hero-grid {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.pc-hero-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.pc-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #FFFFFF;
+  border: 1px solid #E1E2E2;
+  border-radius: 9999px;
+  padding: 6px 16px 6px 12px;
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #4B5563;
+  margin-bottom: 20px;
+}
+
+.pc-hero h1 {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.25;
+  color: #133A7D;
+  margin: 0 0 20px;
+}
+
+.pc-hero-desc {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #2C3E50;
+  margin: 0;
+  max-width: 520px;
+}
+
+.pc-hero-image {
+  flex: 0 0 auto;
+  width: 540px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.pc-hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── Section 2: Listen-on bar ───────────────────────────────── */
+.pc-listen-bar {
+  background-color: #133A7D;
+  padding: 34px 30px;
+}
+
+.pc-listen-bar .pc-section-inner {
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pc-listen-bar h2 {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.pc-listen-bar-icons {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pc-listen-bar-icons a {
+  display: flex;
+  align-items: center;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+
+.pc-listen-bar-icons a:hover {
+  opacity: 1;
+}
+
+/* ── Section 3: About ───────────────────────────────────────── */
+.pc-about {
+  background-color: #EFFAFD;
+  padding: 150px 30px;
+  overflow: hidden;
+}
+
+.pc-about .pc-section-inner {
+  justify-content: center;
+}
+
+.pc-about-grid {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.pc-about-image {
+  flex: 0 0 auto;
+  width: 400px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.pc-about-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.pc-about-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.pc-about-text h1 {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: #133A7D;
+  margin: 0 0 20px;
+  line-height: 1.25;
+}
+
+.pc-about-text p {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #2C3E50;
+  margin: 0 0 16px;
+}
+
+.pc-about-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Section 4: Episodes ────────────────────────────────────── */
+.pc-episodes {
+  background: linear-gradient(281.32deg, #006F99 0%, #133A7D 96.88%);
+  padding: 100px 30px;
+}
+
+.pc-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 40px;
+}
+
+.pc-tab {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pc-tab:first-child {
+  border-radius: 9999px 0 0 9999px;
+}
+
+.pc-tab:last-child {
+  border-radius: 0 9999px 9999px 0;
+}
+
+.pc-tab.active {
+  background: #FFFFFF;
+  color: #133A7D;
+  border-color: #FFFFFF;
+  font-weight: 600;
+}
+
+.pc-episodes-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.pc-episodes-header h2 {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin: 0 0 12px;
+}
+
+.pc-episodes-header p {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+.pc-episodes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.pc-episode-card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.pc-episode-thumb {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+
+.pc-episode-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.pc-episode-date-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 8px 16px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+}
+
+.pc-episode-date-overlay p {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 13px;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.pc-episode-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.pc-episode-body h3 {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1E2B3A;
+  margin: 0 0 16px;
+  line-height: 1.4;
+  flex: 1;
+}
+
+.pc-episode-listen {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #E1E2E2;
+  border-radius: 9999px;
+  padding: 10px 24px;
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #2C3E50;
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s;
+  justify-content: center;
+}
+
+.pc-episode-listen:hover {
+  border-color: #133A7D;
+  color: #133A7D;
+}
+
+.pc-all-episodes {
+  display: flex;
+  justify-content: center;
+}
+
+.pc-all-episodes a {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 9999px;
+  padding: 12px 32px;
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.pc-all-episodes a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #FFFFFF;
+}
+
+/* ── Section 5: Hosts ───────────────────────────────────────── */
+.pc-hosts {
+  background-color: #FBFBFB;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.05);
+  padding: 100px 30px;
+}
+
+.pc-hosts .pc-section-inner {
+  align-items: center;
+}
+
+.pc-hosts-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.pc-hosts-header h2 {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: #133A7D;
+  margin: 0 0 16px;
+}
+
+.pc-hosts-header p {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 16px;
+  color: #2C3E50;
+  margin: 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.pc-host-row {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 60px;
+  width: 100%;
+}
+
+.pc-host-row:last-child {
+  margin-bottom: 0;
+}
+
+.pc-host-image {
+  flex: 0 0 auto;
+  width: 400px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.pc-host-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.pc-host-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.pc-host-info p {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 16px;
+  color: #2C3E50;
+  line-height: 1.6;
+  margin: 0 0 20px;
+}
+
+.pc-host-quote {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: #F9FAFB;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.pc-host-quote svg {
+  flex-shrink: 0;
+}
+
+.pc-host-quote p {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  font-style: italic;
+  color: #133A7D;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.pc-team-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #E1E2E2;
+  border-radius: 9999px;
+  padding: 12px 28px;
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #2C3E50;
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.pc-team-link:hover {
+  border-color: #133A7D;
+  color: #133A7D;
+}
+
+/* ── Section 6: CTA ─────────────────────────────────────────── */
+.pc-cta {
+  background-color: #EFFAFD;
+  padding: 100px 30px;
+  overflow: hidden;
+}
+
+.pc-cta .pc-section-inner {
+  justify-content: center;
+}
+
+.pc-cta-grid {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.pc-cta-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.pc-cta-content h1 {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: #133A7D;
+  margin: 0 0 20px;
+  line-height: 1.25;
+}
+
+.pc-cta-content > p {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 16px;
+  color: #2C3E50;
+  line-height: 1.6;
+  margin: 0 0 28px;
+}
+
+.pc-cta-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.pc-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #133A7D;
+  color: #FFFFFF;
+  border-radius: 9999px;
+  padding: 14px 28px;
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.pc-btn-primary:hover {
+  background: #0E2D66;
+}
+
+.pc-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  color: #133A7D;
+  border: 1px solid #133A7D;
+  border-radius: 9999px;
+  padding: 14px 28px;
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.pc-btn-outline:hover {
+  background: #133A7D;
+  color: #FFFFFF;
+}
+
+.pc-cta-image {
+  flex: 0 0 auto;
+  width: 420px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.pc-cta-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── Section 7: Platforms grid ──────────────────────────────── */
+.pc-platforms {
+  background-color: #133A7D;
+  padding: 100px 30px;
+}
+
+.pc-platforms-grid-outer {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.pc-platforms-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.pc-platforms-text h2 {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin: 0 0 16px;
+  line-height: 1.25;
+}
+
+.pc-platforms-text p {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.pc-platforms-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.pc-platform-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 9999px;
+  padding: 14px 24px;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s;
+  white-space: nowrap;
+}
+
+.pc-platform-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* ── Section 8: Video ───────────────────────────────────────── */
+.pc-video {
+  padding: 0;
+}
+
+.pc-video .pc-section-inner {
+  max-width: 100%;
+}
+
+.pc-video-wrapper {
+  background-image: url("/podcast/map-bg.png");
+  background-size: cover;
+  background-position: center;
+  padding: 100px 30px;
+}
+
+.pc-video-inner {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.pc-video-player {
+  flex: 0 0 auto;
+  width: 420px;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 9/16;
+  background: #000;
+}
+
+.pc-video-player iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.pc-video-overlay {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.pc-video-text-card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 40px;
+  flex: 1;
+  min-width: 0;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+.pc-video-text-card p:first-child {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: #133A7D;
+  margin: 0 0 16px;
+}
+
+.pc-video-text-card p:nth-child(2) {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 16px;
+  color: #2C3E50;
+  line-height: 1.6;
+  margin: 0 0 20px;
+}
+
+.pc-video-text-card p:last-child {
+  font-family: var(--font-outfit), sans-serif;
+  font-size: 14px;
+  color: #6B7280;
+  margin: 0;
+  font-style: italic;
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .pc-hero { padding: 50px 20px; }
+  .pc-hero h1 { font-size: 32px; }
+  .pc-hero-grid { flex-direction: column; }
+  .pc-hero-image { width: 100%; max-width: 540px; }
+
+  .pc-listen-bar { padding: 34px 20px; }
+
+  .pc-about { padding: 50px 20px; }
+  .pc-about-grid { flex-direction: column; }
+  .pc-about-image { width: 100%; max-width: 400px; }
+
+  .pc-episodes { padding: 50px 20px; }
+  .pc-episodes-grid { grid-template-columns: 1fr; max-width: 480px; margin-left: auto; margin-right: auto; }
+
+  .pc-hosts { padding: 50px 20px; }
+  .pc-host-row { flex-direction: column; }
+  .pc-host-row:nth-child(odd) { flex-direction: column; }
+  .pc-host-image { width: 100%; max-width: 400px; }
+
+  .pc-cta { padding: 50px 20px; }
+  .pc-cta-grid { flex-direction: column; }
+  .pc-cta-image { width: 100%; max-width: 420px; }
+
+  .pc-platforms { padding: 100px 20px; }
+  .pc-platforms-grid-outer { flex-direction: column; text-align: center; }
+
+  .pc-video-inner { flex-direction: column; }
+  .pc-video-player { width: 100%; max-width: 420px; }
+}
+
+@media (max-width: 640px) {
+  .pc-hero h1 { font-size: 26px; }
+  .pc-about-text h1 { font-size: 26px; }
+  .pc-episodes-header h2 { font-size: 26px; }
+  .pc-hosts-header h2 { font-size: 26px; }
+  .pc-cta-content h1 { font-size: 26px; }
+  .pc-platforms-text h2 { font-size: 26px; }
+  .pc-cta-buttons { flex-direction: column; }
+  .pc-platforms-links { grid-template-columns: 1fr; }
+}

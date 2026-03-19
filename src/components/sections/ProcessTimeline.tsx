@@ -82,7 +82,7 @@ export default function ProcessTimeline() {
             ref={sectionRef}
             className="bg-[#F7F7F8] py-25"
         >
-            <div className="mx-auto max-w-280">
+            <div className="mx-auto max-w-280 px-[20px] md:px-0">
                 <h2 className="text-center text-[26px] leading-[1.08] font-bold tracking-[-0.03em] text-[#2E4259] md:text-[34px]">
                     Wie sieht eine Zusammenarbeit mit uns aus?
                 </h2>
@@ -93,12 +93,12 @@ export default function ProcessTimeline() {
 
                 <div className="relative mt-[28px] sm:mt-[34px] md:mt-[56px] pt-12">
                     {/* base line */}
-                    <div className="absolute bottom-0 left-[14px] w-[2px] bg-[#D8DDE3] md:left-1/2 md:-translate-x-1/2" />
+                    <div className="absolute top-0 bottom-0 left-[24px] w-[2px] bg-[#D8DDE3] md:left-1/2 md:-translate-x-1/2" />
 
                     {/* animated fill */}
                     <div
                         ref={fillRef}
-                        className="absolute left-[14px] w-[3px] bg-[#173F88] md:left-1/2 md:-translate-x-1/2"
+                        className="absolute top-0 left-[24px] w-[3px] bg-[#173F88] md:left-1/2 md:-translate-x-1/2"
                     />
 
                     <div className="space-y-[22px] sm:space-y-[26px]">
@@ -107,14 +107,14 @@ export default function ProcessTimeline() {
                             ref={(el) => {
                                 triggerRefs.current[0] = el;
                             }}
-                            className="relative md:grid md:grid-cols-[468px_88px_468px] gap-x-8 md:items-center justify-center md:pl-0"
+                            className="relative pl-[72px] md:grid md:grid-cols-[468px_88px_468px] gap-x-8 md:items-center justify-center md:pl-0"
                         >
                             <div className="absolute left-0 top-[14px] md:static md:-translate-y-17 md:order-2 md:col-start-2 md:col-end-3 md:flex md:justify-center">
                                 <div
                                     ref={(el) => {
                                         stepRefs.current[0] = el;
                                     }}
-                                    className="flex h-[30px] w-[30px] items-center justify-center rounded-full border border-[#173F88] bg-white text-[11px] font-medium text-[#173F88] sm:h-[36px] sm:w-[36px] sm:text-[12px] md:h-[50px] md:w-[50px] md:text-[16px]"
+                                    className="flex h-[50px] w-[50px] items-center justify-center rounded-full border border-[#173F88] bg-white text-[16px] font-medium text-[#173F88]"
                                 >
                                     01
                                 </div>
@@ -129,15 +129,15 @@ export default function ProcessTimeline() {
                                         height={1000}
                                         src="https://cdn-ilcgkon.nitrocdn.com/nagGuCyZytyRpkwQIcHQTdSzWgxfpvWP/assets/images/optimized/rev-96f7e66/invest4kids.de/wp-content/uploads/2025/05/schritt1.jpg.webp"
                                         alt="Telefonisches Kennenlernen"
-                                        className="h-full w-full rounded-[10px] object-cover sm:h-[170px] md:h-[196px] md:w-[140px] md:shrink-0"
+                                        className="max-w-[277px] h-[199px] w-full rounded-[10px] object-cover md:max-w-none md:h-[196px] md:w-[140px] md:shrink-0"
                                     />
 
                                     <div className="mt-[14px] sm:mt-[16px] md:mt-0">
-                                        <h3 className="text-[17px] leading-[1.22] font-medium tracking-[-0.02em] text-[#2E4259] sm:text-[20px]">
+                                        <h3 className="text-[18px] leading-[1.22] font-medium tracking-[-0.02em] text-[#2E4259] sm:text-[20px]">
                                             Telefonisches Kennenlernen
                                         </h3>
 
-                                        <p className="mt-[10px] text-[14px] leading-[1.45] text-[#556274] sm:text-[18px] font-outfit md:mt-[14px]">
+                                        <p className="mt-[10px] text-[16px] leading-[1.45] text-[#556274] sm:text-[18px] font-outfit md:mt-[14px]">
                                             Innerhalb der nächsten 48 Stunden ruft dich ein
                                             Mitarbeiter unseres Team an und klärt vorab die
                                             wichtigsten Fragen.
@@ -152,14 +152,14 @@ export default function ProcessTimeline() {
                             ref={(el) => {
                                 triggerRefs.current[1] = el;
                             }}
-                            className="relative md:grid md:grid-cols-[468px_88px_468px] gap-x-8 md:items-center justify-center md:pl-0"
+                            className="relative pl-[72px] md:grid md:grid-cols-[468px_88px_468px] gap-x-8 md:items-center justify-center md:pl-0"
                         >
                             <div className="absolute left-0 top-[14px] md:static md:-translate-y-[250px] md:order-2 md:col-start-2 md:col-end-3 md:flex md:justify-center">
                                 <div
                                     ref={(el) => {
                                         stepRefs.current[1] = el;
                                     }}
-                                    className="flex h-[30px] w-[30px] items-center justify-center rounded-full border border-[#173F88] bg-white text-[11px] font-medium text-[#173F88] sm:h-[36px] sm:w-[36px] sm:text-[12px] md:h-[50px] md:w-[50px] md:text-[16px]"
+                                    className="flex h-[50px] w-[50px] items-center justify-center rounded-full border border-[#173F88] bg-white text-[16px] font-medium text-[#173F88]"
                                 >
                                     02
                                 </div>
@@ -174,15 +174,15 @@ export default function ProcessTimeline() {
                                         height={1000}
                                         src="https://cdn-ilcgkon.nitrocdn.com/nagGuCyZytyRpkwQIcHQTdSzWgxfpvWP/assets/images/optimized/rev-96f7e66/invest4kids.de/wp-content/uploads/2025/11/39f75824eb1596920c7efd85ee608ac85cf3c2f3.png.webp"
                                         alt="Beratungsgespräch"
-                                        className="h-full w-full rounded-[10px] object-cover sm:h-[170px] md:h-[200px] md:w-[140px] md:shrink-0"
+                                        className="max-w-[277px] h-[199px] w-full rounded-[10px] object-cover md:max-w-none md:h-[200px] md:w-[140px] md:shrink-0"
                                     />
 
                                     <div className="mt-[14px] sm:mt-[16px] md:mt-0">
-                                        <h3 className="text-[17px] leading-[1.22] font-medium tracking-[-0.02em] text-[#2E4259] sm:text-[20px]">
+                                        <h3 className="text-[18px] leading-[1.22] font-medium tracking-[-0.02em] text-[#2E4259] sm:text-[20px]">
                                             Dein Beratungsgespräch
                                         </h3>
 
-                                        <p className="mt-[10px] text-[14px] leading-[1.45] text-[#556274] sm:text-[18px] font-outfit md:mt-[14px]">
+                                        <p className="mt-[10px] text-[16px] leading-[1.45] text-[#556274] sm:text-[18px] font-outfit md:mt-[14px]">
                                             In der 30-minütigen Beratung stellt dein persönlicher
                                             Berater eine auf dich und dein Kind angepasste Strategie
                                             zusammen.
@@ -197,14 +197,14 @@ export default function ProcessTimeline() {
                             ref={(el) => {
                                 triggerRefs.current[2] = el;
                             }}
-                            className="relative md:grid md:grid-cols-[468px_88px_468px] gap-x-8 md:items-center justify-center md:pl-0"
+                            className="relative pl-[72px] md:grid md:grid-cols-[468px_88px_468px] gap-x-8 md:items-center justify-center md:pl-0"
                         >
                             <div className="absolute left-0 top-[14px] md:static md:-translate-y-[100px] md:order-2 md:col-start-2 md:col-end-3 md:flex md:justify-center">
                                 <div
                                     ref={(el) => {
                                         stepRefs.current[2] = el;
                                     }}
-                                    className="flex h-[30px] w-[30px] items-center justify-center rounded-full border border-[#173F88] bg-white text-[11px] font-medium text-[#173F88] sm:h-[36px] sm:w-[36px] sm:text-[12px] md:h-[50px] md:w-[50px] md:text-[16px]"
+                                    className="flex h-[50px] w-[50px] items-center justify-center rounded-full border border-[#173F88] bg-white text-[16px] font-medium text-[#173F88]"
                                 >
                                     03
                                 </div>
@@ -218,21 +218,21 @@ export default function ProcessTimeline() {
 
                                         src="https://cdn-ilcgkon.nitrocdn.com/nagGuCyZytyRpkwQIcHQTdSzWgxfpvWP/assets/images/optimized/rev-96f7e66/invest4kids.de/wp-content/uploads/2025/11/1a9339cf4c2930497bc3e8c7f92ad45a43648574.png.webp"
                                         alt="Umsetzung"
-                                        className="h-full w-full rounded-[10px] object-cover sm:h-[170px] md:h-[196px] md:w-[140px] md:shrink-0"
+                                        className="max-w-[277px] h-[199px] w-full rounded-[10px] object-cover md:max-w-none md:h-[196px] md:w-[140px] md:shrink-0"
                                     />
 
                                     <div className="mt-[14px] sm:mt-[16px] md:mt-0">
-                                        <h3 className="text-[17px] leading-[1.22] font-medium tracking-[-0.02em] text-[#2E4259] sm:text-[20px]">
+                                        <h3 className="text-[18px] leading-[1.22] font-medium tracking-[-0.02em] text-[#2E4259] sm:text-[20px]">
                                             Lehn dich zurück!
                                         </h3>
 
-                                        <p className="mt-[10px] text-[14px] leading-[1.45] text-[#556274] sm:text-[18px] font-outfit md:mt-[14px]">
+                                        <p className="mt-[10px] text-[16px] leading-[1.45] text-[#556274] sm:text-[18px] font-outfit md:mt-[14px]">
                                             Deine Arbeit ist getan! Von der Umsetzung bis hin zur
                                             Überwachung und Optimierung, wir kümmern uns um alles! -
                                             einfach, unverbindlich und Schritt für Schritt begleitet.
                                         </p>
 
-                                        <button className="mt-[14px] inline-flex h-[40px] min-w-[132px] items-center justify-center rounded-full border border-[#8EB8D1] bg-transparent px-[18px] text-[13px] font-semibold text-[#2E4259] transition-all duration-300 hover:border-[#173F88] hover:bg-[#173F88] hover:text-white sm:h-[42px] sm:min-w-[142px] sm:text-[14px] md:mt-[16px] md:h-[42px] md:min-w-[148px] md:px-[20px] md:text-[14px]">
+                                        <button className="mt-[14px] hidden md:inline-flex h-[40px] min-w-[132px] items-center justify-center rounded-full border border-[#8EB8D1] bg-transparent px-[18px] text-[13px] font-semibold text-[#2E4259] transition-all duration-300 hover:border-[#173F88] hover:bg-[#173F88] hover:text-white sm:h-[42px] sm:min-w-[142px] sm:text-[14px] md:mt-[16px] md:h-[42px] md:min-w-[148px] md:px-[20px] md:text-[14px]">
                                             Weitere Infos →
                                         </button>
                                     </div>

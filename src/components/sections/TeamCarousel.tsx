@@ -78,16 +78,17 @@ export default function TeamCarousel() {
   return (
     <section className="bg-bg-cream">
       <div className="py-14 md:pt-25 md:pb-17.5 mx-auto w-full md:max-w-346.5">
-        <div className="mx-35.75 flex items-center justify-between">
-          <h2 className="text-2xl font-bold leading-tight md:text-[28px]">
-            Dein Invest4Kids Team
+        <div className="md:mx-35.75 flex flex-col md:flex-row items-center justify-between px-5 gap-y-5">
+          <h2 className="text-center font-bold text-[27px] md:text-[28px] leading-[1.7]">
+            Dein Team hinter Invest4Kids
           </h2>
           <a
             href="/team"
-            className="items-center justify-center border rounded-full transition-all duration-200 hidden text-[18px] sm:inline-flex font-medium h-12.5 py-3.75 px-9 font-outfit border-accent-hover! bg-white!"
+            className="items-center w-full justify-center border rounded-full transition-all duration-200 text-[16px] md:text-[18px] flex font-medium h-12.5 py-3.75 px-9 font-outfit border-accent-hover! bg-white!"
           >
             Mehr zum Team erfahren <ArrowRight width={16} height={16} className="ml-0.5" />
           </a>
+        
         </div>
 
         <div className="overflow-x-hidden pt-20 z-10 pb-7.5 mt-8.5">
@@ -154,16 +155,7 @@ export default function TeamCarousel() {
               />
             </svg>
           </button>
-        </div>
-
-        {/* Mobile-only CTA button */}
-        <Container>
-          <div className="mt-8 text-center sm:hidden">
-            <Button href="/team" variant="outline" className="text-sm">
-              Mehr zum Team erfahren &rarr;
-            </Button>
-          </div>
-        </Container>
+        </div>       
       </div>
     </section>
   );

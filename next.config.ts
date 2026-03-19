@@ -10,6 +10,8 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "cdn.weglot.com" },
       { protocol: "https", hostname: "player.vimeo.com" },
       { protocol: "https", hostname: "i.vimeocdn.com" },
+      { protocol: "https", hostname: "www.gstatic.com" },
+      { protocol: "https", hostname: "i.ytimg.com" },
     ],
   },
 };

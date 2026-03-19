@@ -77,7 +77,7 @@ const QuoteIcon = () => (
 
 export default function TestimonialsSection() {
   return (
-    <section className="bg-[#FFFAEE] px-5 py-12 md:px-[30px] md:py-[100px]">
+    <section className="bg-bg-light-blue px-5 py-12 md:px-[30px] md:py-[100px]">
       <div className="mx-auto max-w-[1100px]">
         <div className="mb-4 flex justify-center">
           <div className="inline-flex w-fit items-center gap-[10px] rounded-full border border-[#F8BF3C] bg-[#FFFAEE] px-4 py-[5px]">
