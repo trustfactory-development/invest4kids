@@ -314,7 +314,6 @@ export default function Header() {
               ))}
             </ul>
           </nav>
-
           <div className="flex h-12.5 w-[416.25px] items-center justify-between gap-4">
             <Link
               href="https://funnel.perspective.co/60b7c8d2bcad43001f5c35a3/690b34a62100cd003c13e6ad/"
