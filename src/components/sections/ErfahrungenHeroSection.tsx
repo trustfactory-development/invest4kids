@@ -2,6 +2,7 @@
 
 import type { CSSProperties } from "react";
 import { useEffect, useRef, useState } from "react";
+import mapBlur from "@/assets/images/erfahrungen/map-blur.webp";
 
 type CountFormat = "integer-dot" | "decimal-comma" | "integer";
 
@@ -247,7 +248,7 @@ export default function ErfahrungenHeroSection() {
         <div className="flex justify-center lg:justify-end">
           <div className="relative w-full max-w-[260px] sm:max-w-[290px] md:max-w-[313px]">
             <img
-              src="https://invest4kids.de/wp-content/uploads/2025/11/map-blur.webp"
+              src={mapBlur.src}
               alt="map"
               className="h-auto w-full object-contain"
               draggable={false}

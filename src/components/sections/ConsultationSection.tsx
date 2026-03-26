@@ -1,4 +1,5 @@
 import Image from "next/image";
+import teamGetToKnowGroup from "@/assets/images/team/team-get-to-know-group.webp";
 
 function CalendarIcon() {
   return (
@@ -62,7 +63,7 @@ export default function ConsultationSection() {
         {/* Right visual */}
         <div className="relative w-full justify-self-stretch lg:mt-0 lg:min-h-[442px] lg:justify-self-start">
           <Image
-            src="https://cdn-ilcgkon.nitrocdn.com/nagGuCyZytyRpkwQIcHQTdSzWgxfpvWP/assets/images/optimized/rev-96f7e66/invest4kids.de/wp-content/uploads/2025/11/Group-Photo-e1763991614223-1024x788.webp"
+            src={teamGetToKnowGroup}
             alt="Beratungsteam steht zusammen"
             width={575}
             height={442}

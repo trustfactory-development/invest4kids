@@ -5,13 +5,9 @@ import Link from "next/link";
 import { useState } from "react";
 import { Landmark, Users, BadgeCheck, Heart, Mail } from "lucide-react";
 import MapVimeoSection from "@/components/sections/MapVimeoSection";
-
-const pressVideoCover =
-  "https://invest4kids.de/wp-content/uploads/2026/01/video-cover-presse.jpg";
-const pressTeamImage =
-  "https://invest4kids.de/wp-content/uploads/2025/12/Group-photo.webp";
-const contactImage =
-  "https://invest4kids.de/wp-content/uploads/2026/02/DSC06934.png";
+import groupPhoto from "@/assets/images/home/hero/group-photo.webp";
+import pressContactImage from "@/assets/images/press/sabrina-rymarowicz.png";
+import pressVideoCover from "@/assets/images/press/video-cover-presse.jpg";
 
 const stats = [
   {
@@ -255,7 +251,7 @@ export function PressPageSections() {
           <div className="flex flex-col gap-[34px] lg:flex-row lg:items-center lg:justify-between lg:gap-[43px]">
             <div className="w-full lg:max-w-[513px]">
               <Image
-                src={pressTeamImage}
+                src={groupPhoto}
                 alt="Gruppenfoto des Invest4Kids Teams, das Eltern bei Finanzberatung unterstützt"
                 width={1026}
                 height={676}
@@ -300,7 +296,7 @@ export function PressPageSections() {
             <div className="flex flex-col gap-6 md:gap-8 lg:flex-row lg:items-start lg:gap-[40px]">
               <div className="mx-auto flex w-full md:max-w-[150px] flex-col items-center lg:mx-0 lg:shrink-0">
                 <Image
-                  src={contactImage}
+                  src={pressContactImage}
                   alt="Sabrina Rymarowicz"
                   width={150}
                   height={150}

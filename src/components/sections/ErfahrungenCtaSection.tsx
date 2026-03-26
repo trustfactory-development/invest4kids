@@ -1,3 +1,5 @@
+import aboutHeroGroupPhoto from "@/assets/images/about/about-hero-group-photo.webp";
+
 export default function ErfahrungenCtaSection() {
   return (
     <section className="bg-[linear-gradient(90deg,#173F88_0%,#0C7AA7_100%)] px-[20px] py-[60px] sm:px-[24px] sm:py-[80px] md:px-[30px] md:py-[150px]">
@@ -8,7 +10,7 @@ export default function ErfahrungenCtaSection() {
             <div className="relative w-full max-w-[440px] md:max-w-[470px]">
               {/* <div className="absolute left-[10px] top-[4px] h-full w-full rounded-[14px] bg-[#7B8F82] opacity-[0.88] rotate-[-6deg]" /> */}
               <img
-                src="https://invest4kids.de/wp-content/uploads/2025/12/Group-photo-1024x676.webp"
+                src={aboutHeroGroupPhoto.src}
                 alt="Group photo of the Invest4Kids team, which supports parents with financial advice"
                 className="relative z-[2] h-auto w-full rounded-[14px] object-cover shadow-[0_10px_24px_rgba(0,0,0,0.12)]"
                 draggable={false}

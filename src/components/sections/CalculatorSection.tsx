@@ -1,4 +1,5 @@
 import Image from "next/image";
+import rechnerScreen from "@/assets/images/calculator/rechner-screen.webp";
 
 export default function CalculatorSection() {
   return (
@@ -11,7 +12,7 @@ export default function CalculatorSection() {
       <div className="mx-auto flex max-w-[1100px] flex-col items-center gap-[30px] md:flex-row md:gap-12">
         <div className="hidden md:block">
           <Image
-            src="https://invest4kids.de/wp-content/uploads/2026/01/rechner-screen.png.webp"
+            src={rechnerScreen}
             alt="Interaktiver Rechner für Invest4Kids Berechnung von Investment-Wachstum basierend auf Sparrate und Alter des Kindes."
             className="h-auto w-full max-w-[506px] object-contain"
             width={1000}
@@ -67,7 +68,7 @@ export default function CalculatorSection() {
 
           <div className="pt-6 md:mt-[30px] md:hidden">
             <Image
-              src="https://invest4kids.de/wp-content/uploads/2026/01/rechner-screen.png.webp"
+              src={rechnerScreen}
               alt="Interaktiver Rechner für Invest4Kids"
               className="h-auto w-full max-w-[420px] object-contain"
               width={800}

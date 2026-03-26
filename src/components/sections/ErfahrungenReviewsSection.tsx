@@ -1,6 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import googleIcon from "@/assets/images/erfahrungen/google-icon.svg";
+import googleStar from "@/assets/images/erfahrungen/google-star.svg";
+import reviewAvatarAm from "@/assets/images/erfahrungen/review-avatar-am.webp";
+import reviewAvatarKatharina from "@/assets/images/erfahrungen/review-avatar-katharina.webp";
+import reviewAvatarKerstin from "@/assets/images/erfahrungen/review-avatar-kerstin.webp";
+import reviewAvatarLinh from "@/assets/images/erfahrungen/review-avatar-linh.webp";
+import reviewAvatarSezen from "@/assets/images/erfahrungen/review-avatar-sezen.webp";
 
 type Review = {
   name: string;
@@ -17,8 +24,7 @@ const reviews: Review[] = [
     name: "Sezen Tatlıcı",
     time: "vor 4 Tagen",
     fullTime: "10. März 2026 um 15:24 GMT+3",
-    avatar:
-      "https://lh3.googleusercontent.com/a-/ALV-UjX6wPEHJkpJ6N_LUoEzwbhJOUIoAFlIcyw6c3tdkyPBHTJSekM=w80-h80-c-rp-mo-ba2-br100",
+    avatar: reviewAvatarSezen.src,
     text: "Mallik hat mich kompetent, freundlich und geduldig beraten. Danke! Dieses Produkt ist für alle Eltern geeignet, die sich (aus welchen Gründen auch immer) nicht mit dem Aktienmarkt befassen wollen/können. Für Eltern, die einfach nur wollen, dass das, was sie jeden Monat für das eigene Kind ansparen, sich vermehrt und nicht weniger wird, wie bei normalen Sparbüchern, die der Inflation zum Opfer fallen. Hier haben sie einen guten Ansprechpartner und müssen selbst nichts tun und können stattdessen beobachten, dass das Vermögen des Kindes sich stetig aufbaut.",
     initial: "S",
     bg: "#EADFCF",
@@ -45,8 +51,7 @@ const reviews: Review[] = [
     name: "Linh Pfeifer",
     time: "vor 1 Woche",
     fullTime: "6. März 2026 um 12:58 GMT+3",
-    avatar:
-      "https://lh3.googleusercontent.com/a-/ALV-UjW_p0ZANR-mqJt3E1kmGSTr0QNaBPZuwTphPpk7Al5bIhTETDkH=w80-h80-c-rp-mo-br100",
+    avatar: reviewAvatarLinh.src,
     text: "Die Beratung war von Anfang an sehr professionell, transparent und verständlich erklärt. Susanna hat sich viel Zeit genommen, um alle Fragen ausführlich zu beantworten und verschiedene Möglichkeiten ruhig und geduldig zu erklären. Man merkt sofort, dass ihr das Wohl der Familien und Kinder wirklich am Herzen liegt. Besonders gefallen hat mir die freundliche Art und dass alles Schritt für Schritt nachvollziehbar erklärt wurde. Dadurch fühlt man sich gut aufgehoben und kann Entscheidungen mit einem sicheren Gefühl treffen. Vielen Dank an Susanna und das Team von invest4kids für die tolle Unterstützung – ich kann die Beratung auf jeden Fall weiterempfehlen!",
     initial: "L",
     bg: "#5B6678",
@@ -55,8 +60,7 @@ const reviews: Review[] = [
     name: "Kerstin H.",
     time: "vor 2 Wochen",
     fullTime: "26. Februar 2026 um 20:34 GMT+3",
-    avatar:
-      "https://lh3.googleusercontent.com/a/ACg8ocJkhndeRG5O4O1GMbm69QM2kmw-h_VNO-mqxrhJhiLh_S--Jg=w80-h80-c-rp-mo-ba2-br100",
+    avatar: reviewAvatarKerstin.src,
     text: "Vom ersten Kontakt (Terminanfrage) bis zum persönlichen Onlinetermin lief alles super. Zu Beginn gab es ein erstes Telefonat, wo die Rahmenbedingungen erklärt wurden. Anschließend wurde gemeinsam geschaut, wann wir einen für uns passenden Termin finden können, welcher dann schon eine Woche später war. Am Tag des Gespräches wurden wir sogar nochmal an den Termin per WhatsApp erinnert. Wir fühlen uns sehr gut aufgehoben und bereuen nicht, den Schritt gegangen zu sein.",
     initial: "K",
     bg: "#8B3F0B",
@@ -65,8 +69,7 @@ const reviews: Review[] = [
     name: "Katharina Müller",
     time: "vor 2 Wochen",
     fullTime: "25. Februar 2026 um 16:29 GMT+3",
-    avatar:
-      "https://lh3.googleusercontent.com/a/ACg8ocLYHyEMB0qk5hdg7_FjIZj_ShjSrnLKePCn3XURhXzdK1Wtbg=w80-h80-c-rp-mo-br100",
+    avatar: reviewAvatarKatharina.src,
     text: "Wir haben für unsere Kinder Verträge bei Invest 4 Kids abgeschlossen und sind mit dem gesamten Service sehr zufrieden. Unsere Ansprechpartnerin Laila war super freundlich und sehr kompetent. Wir haben uns bestens beraten und begleitet gefühlt. Vielen Dank für den tollen Service!",
     initial: "K",
     bg: "#CF2F72",
@@ -75,8 +78,7 @@ const reviews: Review[] = [
     name: "A.M.",
     time: "vor 2 Wochen",
     fullTime: "25. Februar 2026 um 15:44 GMT+3",
-    avatar:
-      "https://lh3.googleusercontent.com/a/ACg8ocIsfTMMO84EryezOOVwEsgKWOvOxF-JwCy02AYiRjvlWdZOgA=w80-h80-c-rp-mo-br100",
+    avatar: reviewAvatarAm.src,
     text: "Super liebe und informative Präsentation. Fragen wurden ehrlich und transparent beantwortet. Punkte wurden alle besprochen und man merkt, dass hier auch mit Herz und Verstand gearbeitet wird. Man fühlt sich sicher und gut aufgehoben. Vielen Dank!",
     initial: "A",
     bg: "#5B6678",
@@ -134,7 +136,7 @@ function ReviewCard({
         {isDesktop ? (
           <div className="group/google relative z-[30] shrink-0">
             <img
-              src="https://cdn.trustindex.io/assets/platform/Google/icon.svg"
+              src={googleIcon.src}
               alt="Google"
               className="mt-[2px] h-[20px] w-[20px] shrink-0"
               draggable={false}
@@ -145,7 +147,7 @@ function ReviewCard({
           </div>
         ) : (
           <img
-            src="https://cdn.trustindex.io/assets/platform/Google/icon.svg"
+            src={googleIcon.src}
             alt="Google"
             className="mt-[2px] h-[20px] w-[20px] shrink-0"
             draggable={false}
@@ -158,7 +160,7 @@ function ReviewCard({
           {Array.from({ length: 5 }).map((_, starIndex) => (
             <img
               key={starIndex}
-              src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg"
+              src={googleStar.src}
               alt="star"
               className="h-[17px] w-[17px]"
               draggable={false}
@@ -516,7 +518,7 @@ export default function ErfahrungenReviewsSection() {
 
                         <div className="group/google relative z-[30] shrink-0">
                           <img
-                            src="https://cdn.trustindex.io/assets/platform/Google/icon.svg"
+                            src={googleIcon.src}
                             alt="Google"
                             className="mt-[2px] h-[20px] w-[20px] shrink-0"
                             draggable={false}
@@ -532,7 +534,7 @@ export default function ErfahrungenReviewsSection() {
                           {Array.from({ length: 5 }).map((_, starIndex) => (
                             <img
                               key={starIndex}
-                              src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg"
+                              src={googleStar.src}
                               alt="star"
                               className="h-[17px] w-[17px]"
                               draggable={false}

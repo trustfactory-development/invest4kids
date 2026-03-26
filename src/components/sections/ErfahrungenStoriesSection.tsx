@@ -1,40 +1,46 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import lauraImage from "@/assets/images/erfahrungen/laura.webp";
+import margotImage from "@/assets/images/erfahrungen/margot.webp";
+import oliverImage from "@/assets/images/erfahrungen/oliver.webp";
+import sarahImage from "@/assets/images/erfahrungen/sarah.webp";
+import storyImage from "@/assets/images/erfahrungen/story-image.webp";
+import yvonneImage from "@/assets/images/erfahrungen/yvonne.webp";
 
 const stories = [
   {
     name: "Yvonne",
     role: "Mutter von 2 Kindern",
-    image: "https://invest4kids.de/wp-content/uploads/2025/11/Yvonne.webp",
+    image: yvonneImage.src,
     video:
       "https://invest4kids.de/wp-content/uploads/2025/12/Yvonne-351x274-1.mov",
   },
   {
     name: "Oliver",
     role: "Vater von 2 Söhnen",
-    image: "https://invest4kids.de/wp-content/uploads/2025/11/Oliver.webp",
+    image: oliverImage.src,
     video:
       "https://invest4kids.de/wp-content/uploads/2025/12/Oliver-Frohnert-351x274-1.mov",
   },
   {
     name: "Laura",
     role: "Mutter von einem Sohn",
-    image: "https://invest4kids.de/wp-content/uploads/2025/11/Laura.webp",
+    image: lauraImage.src,
     video:
       "https://invest4kids.de/wp-content/uploads/2025/12/Laura-Steinhaeuser-351x274-1.mov",
   },
   {
     name: "Sarah",
     role: "Mutter von 2 Töchtern",
-    image: "https://invest4kids.de/wp-content/uploads/2025/11/Sarah.webp",
+    image: sarahImage.src,
     video:
       "https://invest4kids.de/wp-content/uploads/2025/12/Sarah-Siegmund-351x274-1.mov",
   },
   {
     name: "Margot",
     role: "Mutter von 2 Söhnen",
-    image: "https://invest4kids.de/wp-content/uploads/2025/11/Margot.webp",
+    image: margotImage.src,
     video:
       "https://invest4kids.de/wp-content/uploads/2025/12/Margot-351x274-1.mov",
   },
@@ -86,7 +92,7 @@ export default function ErfahrungenStoriesSection() {
         {/* heading */}
         <div className="flex items-start gap-[16px] md:gap-[18px]">
           <img
-            src="https://invest4kids.de/wp-content/uploads/2025/11/StoryImage.webp"
+            src={storyImage.src}
             alt="Story"
             className="h-[62px] w-[62px] shrink-0 object-contain md:h-[76px] md:w-[76px]"
             draggable={false}

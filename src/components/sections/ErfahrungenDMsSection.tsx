@@ -1,20 +1,28 @@
+import dmsStatsImages from "@/assets/images/home/hero/dms-stats-images.webp";
+import dynamicIsland from "@/assets/images/erfahrungen/dynamic-island.webp";
+import message1Avatar from "@/assets/images/erfahrungen/message-1.webp";
+import message2Avatar from "@/assets/images/erfahrungen/message-2.webp";
+import message3Avatar from "@/assets/images/erfahrungen/message-3.webp";
+import message4Avatar from "@/assets/images/erfahrungen/message-4.webp";
+import phoneImage from "@/assets/images/erfahrungen/phone-image.webp";
+
 const dmMessages = [
   {
     id: 1,
-    avatar: "https://invest4kids.de/wp-content/uploads/2025/11/Message1.webp",
+    avatar: message1Avatar.src,
     alt: "avatar people S",
     text: `Hey ihr Lieben. 😌
 Einmal ein ganz großes Dankeschön an euch. Durch eure Instagram Beiträge habe ich mich für eure Beratung eingetragen und fühle mich jetzt viel sicherer und endlich vorbereitet für die Zukunft meines Kindes! 😊👍🏻`,
   },
   {
     id: 2,
-    avatar: "https://invest4kids.de/wp-content/uploads/2025/11/Message2.webp",
+    avatar: message2Avatar.src,
     alt: "avatar people J",
     text: `Einfach nur top! Ich habe das Gefühl da ist endlich jemand, der sich wirklich Gedanken über die Wünsche von Eltern macht 😊`,
   },
   {
     id: 3,
-    avatar: "https://invest4kids.de/wp-content/uploads/2025/11/Message3.webp",
+    avatar: message3Avatar.src,
     alt: "avatar people A",
     text: `Ich bin so glücklich, dass ich mich bei euch beraten lassen habe!
 Ich kann endlich positiv in die Zukunft schauen und weiß, dass mein Sohn perfekt abgesichert ist.
@@ -22,7 +30,7 @@ Danke, ich werde euch auf jeden Fall weiterempfehlen 😊`,
   },
   {
     id: 4,
-    avatar: "https://invest4kids.de/wp-content/uploads/2025/11/Message4.webp",
+    avatar: message4Avatar.src,
     alt: "avatar people L",
     text: `Ich hatte auch meine Beratung bei Felix und ich war wirklich richtig überrascht, wie leicht und verständlich er mir das Thema erklärt hat – ich bin da leider total verloren gewesen 😅🤣
 Also danke nochmal lieber Felix, ich fühle mich jetzt endlich richtig sicher und gut aufgehoben bei euch.`,
@@ -54,7 +62,7 @@ export default function ErfahrungenDMsSection() {
 
             <div className="mt-[14px] flex items-center gap-[12px] md:mt-[16px]">
               <img
-                src="https://invest4kids.de/wp-content/uploads/2025/11/DMs-Stats-Images.webp"
+                src={dmsStatsImages.src}
                 alt="people"
                 className="h-auto w-[94px] object-contain md:w-[112px]"
                 draggable={false}
@@ -84,7 +92,7 @@ export default function ErfahrungenDMsSection() {
             <div className="relative w-full sm:w-[330px] md:w-[350px]" style={{ aspectRatio: "1.01/2.07" }}>
               {/* phone shell */}
               <img
-                src="https://invest4kids.de/wp-content/uploads/2025/11/Phone-Image.webp"
+                src={phoneImage.src}
                 alt="Phone frame"
                 className="relative z-[5] h-auto w-full object-contain select-none"
                 draggable={false}
@@ -92,7 +100,7 @@ export default function ErfahrungenDMsSection() {
 
               {/* dynamic island */}
               <img
-                src="https://invest4kids.de/wp-content/uploads/2025/11/d-island.webp"
+                src={dynamicIsland.src}
                 alt=""
                 aria-hidden="true"
                 className="absolute left-1/2 top-[30px] z-[8] w-[122px] -translate-x-1/2 object-contain"

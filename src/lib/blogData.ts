@@ -1,3 +1,22 @@
+import aktienVerschenkenAnKinderImage from "@/assets/images/blog/aktien-verschenken-an-kinder.jpeg"
+import alleinerziehendImage from "@/assets/images/blog/alleinerziehend.jpg"
+import angelinaAvatar from "@/assets/images/blog/angelina-avatar.webp"
+import daxErklaertFuerKinderImage from "@/assets/images/blog/dax-erklaert-fuer-kinder.jpeg"
+import familieMitBabyImage from "@/assets/images/blog/familie-mit-baby.webp"
+import fruehstartRenteChart1 from "@/assets/images/blog/fruehstart-rente-chart-1.png"
+import fruehstartRenteChart2 from "@/assets/images/blog/fruehstart-rente-chart-2.png"
+import fruehstartRenteChart3 from "@/assets/images/blog/fruehstart-rente-chart-3.png"
+import fruehstartRenteChart4 from "@/assets/images/blog/fruehstart-rente-chart-4.png"
+import fruehstartRenteChart5 from "@/assets/images/blog/fruehstart-rente-chart-5.png"
+import fruehstartRenteCover from "@/assets/images/blog/fruehstart-rente-cover.png"
+import geldAufKontoDerKinderParkenImage from "@/assets/images/blog/geld-auf-konto-der-kinder-parken.jpeg"
+import hausVererbenAnKinderImage from "@/assets/images/blog/haus-vererben-an-kinder.jpeg"
+import kindersparplanImage from "@/assets/images/blog/kindersparplan.jpeg"
+import mutterMitKindAufFeldImage from "@/assets/images/blog/mutter-mit-kind-auf-feld.webp"
+import niessbrauchNachteileFuerKinderImage from "@/assets/images/blog/niessbrauch-nachteile-fuer-kinder.jpeg"
+import schenkungAnKinderImage from "@/assets/images/blog/schenkung-an-kinder.jpeg"
+import studieThumbnailImage from "@/assets/images/blog/studie-thumbnail.png"
+
 export interface Author {
   name: string
   slug: string
@@ -28,16 +47,22 @@ export interface BlogPost {
   content?: ContentBlock[]
 }
 
+const angelinaAuthor: Author = {
+  name: "Angelina",
+  slug: "angelina",
+  image: angelinaAvatar.src,
+}
+
 export const posts: BlogPost[] = [
   {
     slug: "fruehstart-rente-eltern-zweifel",
     title: "Frühstart-Rente: Warum Eltern Zweifel an Wirkung und Fairness haben",
     excerpt:
       "Invest4Kids-Umfrage unter 2.400 Eltern zeigt deutlichen Reformbedarf. Die Frühstart-Rente soll Kindern frühzeitig beim Vermögensaufbau helfen und langfristig die Altersvorsorge stärken. Doch wie bewerten Eltern dieses Modell tatsächlich?",
-    image: "https://invest4kids.de/wp-content/uploads/2026/01/image6.png",
+    image: fruehstartRenteCover.src,
     publishedAt: "21.01.2026",
     readingTime: "5 Minuten",
-    author: { name: "Angelina", slug: "angelina", image: "/images/authors/angelina.jpg" },
+    author: angelinaAuthor,
     category: { name: "Neuigkeiten", slug: "neuigkeiten" },
     content: [
       { type: "paragraph", text: "Invest4Kids-Umfrage unter 2.400 Eltern zeigt deutlichen Reformbedarf", bold: true },
@@ -48,7 +73,7 @@ export const posts: BlogPost[] = [
       { type: "heading", text: "Frühstart-Rente: Reichen 10 Euro monatlich für den Vermögensaufbau?" },
       {
         type: "image",
-        src: "https://invest4kids.de/wp-content/uploads/2026/01/image1.png",
+        src: fruehstartRenteChart1.src,
         alt: "Einschätzung der Eltern zur Wirkung der Frühstart-Rente",
         caption: "Abbildung 1: Einschätzung der Eltern zur Wirkung der Frühstart-Rente",
       },
@@ -63,7 +88,7 @@ export const posts: BlogPost[] = [
       { type: "heading", text: "Kritik an der Fairness: Wenn Geschwister unterschiedlich profitieren" },
       {
         type: "image",
-        src: "https://invest4kids.de/wp-content/uploads/2026/01/image2.png",
+        src: fruehstartRenteChart2.src,
         alt: "Wahrnehmung der Fairness der Frühstart-Rente innerhalb von Familien",
         caption: "Abbildung 2: Wahrnehmung der Fairness der Frühstart-Rente innerhalb von Familien",
       },
@@ -78,7 +103,7 @@ export const posts: BlogPost[] = [
       { type: "heading", text: "Verständlichkeit als zentrales Problem der Frühstart-Rente" },
       {
         type: "image",
-        src: "https://invest4kids.de/wp-content/uploads/2026/01/image3.png",
+        src: fruehstartRenteChart3.src,
         alt: "Verständlichkeit der Frühstart-Rente aus Sicht der Eltern",
         caption: "Abbildung 3: Verständlichkeit der Frühstart-Rente aus Sicht der Eltern",
       },
@@ -93,7 +118,7 @@ export const posts: BlogPost[] = [
       { type: "heading", text: "Gute Idee, aber Schwächen in der Umsetzung" },
       {
         type: "image",
-        src: "https://invest4kids.de/wp-content/uploads/2026/01/image4.png",
+        src: fruehstartRenteChart4.src,
         alt: "Gesamtbewertung der Frühstart-Rente durch Eltern",
         caption: "Abbildung 4: Gesamtbewertung der Frühstart-Rente durch Eltern",
       },
@@ -108,7 +133,7 @@ export const posts: BlogPost[] = [
       { type: "heading", text: "Welche Alternativen Eltern bevorzugen" },
       {
         type: "image",
-        src: "https://invest4kids.de/wp-content/uploads/2026/01/image5.png",
+        src: fruehstartRenteChart5.src,
         alt: "Bevorzugte Modelle zur staatlichen Förderung des Vermögensaufbaus von Kindern",
         caption: "Abbildung 5: Bevorzugte Modelle zur staatlichen Förderung des Vermögensaufbaus von Kindern",
       },
@@ -186,10 +211,10 @@ export const posts: BlogPost[] = [
     title: "Offener Brief zum Thema Alleinerziehende",
     excerpt:
       "Ein offener Brief zur Situation von Alleinerziehenden und den besonderen Herausforderungen bei der finanziellen Absicherung ihrer Kinder.",
-    image: "https://invest4kids.de/wp-content/uploads/2025/10/alleinerziehend.jpg",
+    image: alleinerziehendImage.src,
     publishedAt: "08.10.2025",
     readingTime: "6 Minuten",
-    author: { name: "Angelina", slug: "angelina", image: "/images/authors/angelina.jpg" },
+    author: angelinaAuthor,
     category: { name: "Neuigkeiten", slug: "neuigkeiten" },
   },
   {
@@ -197,10 +222,10 @@ export const posts: BlogPost[] = [
     title: "Aktien verschenken an Kinder: Das müssen Eltern wissen",
     excerpt:
       "Aktien als Geschenk für Kinder — eine clevere Möglichkeit, frühzeitig Vermögen aufzubauen. Erfahre, worauf Eltern achten müssen und welche Vorteile es gibt.",
-    image: "https://invest4kids.de/wp-content/uploads/2025/07/Aktien-verschenken-an-Kinder.jpeg",
+    image: aktienVerschenkenAnKinderImage.src,
     publishedAt: "24.07.2025",
     readingTime: "11 Minuten",
-    author: { name: "Angelina", slug: "angelina", image: "/images/authors/angelina.jpg" },
+    author: angelinaAuthor,
     category: { name: "Investment-Strategien", slug: "investment-strategien" },
   },
   {
@@ -208,10 +233,10 @@ export const posts: BlogPost[] = [
     title: "Schenkung an Kinder: Was müssen Eltern dabei beachten?",
     excerpt:
       "Schenkungen an Kinder bieten steuerliche Vorteile und helfen beim Vermögensaufbau. Hier erfährst du, was Eltern beachten sollten.",
-    image: "https://invest4kids.de/wp-content/uploads/2025/07/Schenkung-an-Kinder.jpeg",
+    image: schenkungAnKinderImage.src,
     publishedAt: "24.07.2025",
     readingTime: "11 Minuten",
-    author: { name: "Angelina", slug: "angelina", image: "/images/authors/angelina.jpg" },
+    author: angelinaAuthor,
     category: { name: "Investment-Strategien", slug: "investment-strategien" },
   },
   {
@@ -219,10 +244,10 @@ export const posts: BlogPost[] = [
     title: "Haus vererben an Kinder: Das sollten Eltern dabei bedenken",
     excerpt:
       "Ein Haus an die Kinder vererben — was es zu beachten gibt, welche steuerlichen Aspekte wichtig sind und wie du den Übergang optimal planst.",
-    image: "https://invest4kids.de/wp-content/uploads/2025/07/haus-vererben-an-kinder.jpeg",
+    image: hausVererbenAnKinderImage.src,
     publishedAt: "23.07.2025",
     readingTime: "11 Minuten",
-    author: { name: "Angelina", slug: "angelina", image: "/images/authors/angelina.jpg" },
+    author: angelinaAuthor,
     category: { name: "Investment-Strategien", slug: "investment-strategien" },
   },
   {
@@ -230,10 +255,10 @@ export const posts: BlogPost[] = [
     title: "DAX erklärt für Kinder – und für Eltern, die clever vorsorgen wollen",
     excerpt:
       "Was ist der DAX und warum ist er für die Geldanlage wichtig? Eine verständliche Erklärung für Eltern, die clever für ihre Kinder vorsorgen möchten.",
-    image: "https://invest4kids.de/wp-content/uploads/2025/07/DAX-erklaert-fuer-Kinder.jpeg",
+    image: daxErklaertFuerKinderImage.src,
     publishedAt: "18.07.2025",
     readingTime: "11 Minuten",
-    author: { name: "Angelina", slug: "angelina", image: "/images/authors/angelina.jpg" },
+    author: angelinaAuthor,
     category: { name: "Investment-Strategien", slug: "investment-strategien" },
   },
   {
@@ -241,10 +266,10 @@ export const posts: BlogPost[] = [
     title: "Geld auf dem Konto der Kinder parken: Eine Hilfe beim Steuern sparen!",
     excerpt:
       "Geld auf dem Kinderkonto parken kann steuerliche Vorteile bringen. Erfahre, wie Eltern davon profitieren und worauf zu achten ist.",
-    image: "https://invest4kids.de/wp-content/uploads/2025/07/geld-auf-konto-der-kinder-parken.jpeg",
+    image: geldAufKontoDerKinderParkenImage.src,
     publishedAt: "16.07.2025",
     readingTime: "11 Minuten",
-    author: { name: "Angelina", slug: "angelina", image: "/images/authors/angelina.jpg" },
+    author: angelinaAuthor,
     category: { name: "Investment-Strategien", slug: "investment-strategien" },
   },
   {
@@ -252,10 +277,10 @@ export const posts: BlogPost[] = [
     title: "Nießbrauch: Nachteile für Kinder erklärt",
     excerpt:
       "Nießbrauch kann Nachteile für Kinder mit sich bringen. Wir erklären, worauf Eltern achten sollten und welche Alternativen es gibt.",
-    image: "https://invest4kids.de/wp-content/uploads/2025/07/Niessbrauch-Nachteile-fuer-Kinder.jpeg",
+    image: niessbrauchNachteileFuerKinderImage.src,
     publishedAt: "15.07.2025",
     readingTime: "10 Minuten",
-    author: { name: "Angelina", slug: "angelina", image: "/images/authors/angelina.jpg" },
+    author: angelinaAuthor,
     category: { name: "Investment-Strategien", slug: "investment-strategien" },
   },
   {
@@ -263,10 +288,10 @@ export const posts: BlogPost[] = [
     title: "Kontrolle oder Freiheit? Eine Untersuchung zur finanziellen Sicherheit von Kindern und den Einfluss elterlicher Entscheidungen",
     excerpt:
       "Eine umfassende Untersuchung darüber, wie elterliche Entscheidungen die finanzielle Sicherheit von Kindern beeinflussen — zwischen Kontrolle und Freiheit.",
-    image: "https://invest4kids.de/wp-content/uploads/2025/04/studie_thumbnail.png",
+    image: studieThumbnailImage.src,
     publishedAt: "08.04.2025",
     readingTime: "25 Minuten",
-    author: { name: "Angelina", slug: "angelina", image: "/images/authors/angelina.jpg" },
+    author: angelinaAuthor,
     category: { name: "Neuigkeiten", slug: "neuigkeiten" },
   },
   {
@@ -274,10 +299,10 @@ export const posts: BlogPost[] = [
     title: "Die Zukunft deines Kindes mit einem maßgeschneiderten Kindersparplan von Invest4Kids sichern",
     excerpt:
       "Ein maßgeschneiderter Kindersparplan hilft dir, die finanzielle Zukunft deines Kindes langfristig und sicher aufzubauen.",
-    image: "https://invest4kids.de/wp-content/uploads/2025/02/Kindersparplan.jpeg",
+    image: kindersparplanImage.src,
     publishedAt: "18.02.2025",
     readingTime: "10 Minuten",
-    author: { name: "Angelina", slug: "angelina", image: "/images/authors/angelina.jpg" },
+    author: angelinaAuthor,
     category: { name: "Neuigkeiten", slug: "neuigkeiten" },
   },
   {
@@ -285,10 +310,10 @@ export const posts: BlogPost[] = [
     title: "Kostenlose Expertenberatung – Sparvertrag für Kinder gemeinsam mit Invest4Kids",
     excerpt:
       "Sichere dir eine kostenlose Expertenberatung und finde gemeinsam mit Invest4Kids den passenden Sparvertrag für dein Kind.",
-    image: "https://invest4kids.de/wp-content/uploads/2024/11/Mutter_mit_Kind_auf_Feld-1.webp",
+    image: mutterMitKindAufFeldImage.src,
     publishedAt: "11.10.2024",
     readingTime: "5 Minuten",
-    author: { name: "Angelina", slug: "angelina", image: "/images/authors/angelina.jpg" },
+    author: angelinaAuthor,
     category: { name: "Neuigkeiten", slug: "neuigkeiten" },
   },
   {
@@ -296,10 +321,10 @@ export const posts: BlogPost[] = [
     title: "Mit Invest4Kids sicherst du deinem Kind eine goldene Zukunft – Sparen für Kinder leicht gemacht",
     excerpt:
       "Sparen für Kinder leicht gemacht: Erfahre, wie Invest4Kids dir hilft, die goldene Zukunft deines Kindes zu sichern.",
-    image: "https://invest4kids.de/wp-content/uploads/2024/11/Familie_mit_Baby.webp",
+    image: familieMitBabyImage.src,
     publishedAt: "08.10.2024",
     readingTime: "6 Minuten",
-    author: { name: "Angelina", slug: "angelina", image: "/images/authors/angelina.jpg" },
+    author: angelinaAuthor,
     category: { name: "Neuigkeiten", slug: "neuigkeiten" },
   },
 ]

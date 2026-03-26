@@ -1,3 +1,5 @@
+import konzeptRad from "@/assets/images/konzept/konzept-rad.png";
+
 export default function KonzeptHeroSection() {
   return (
     <section className="overflow-hidden bg-[#EFFAFD] px-5 md:px-0">
@@ -57,7 +59,7 @@ export default function KonzeptHeroSection() {
 
           <div className="flex w-full justify-center md:w-auto md:justify-end">
             <img
-              src="https://invest4kids.de/wp-content/uploads/2026/01/konzept-rad.png"
+              src={konzeptRad.src}
               alt="Invest4Kids Konzept – Vorteile wie Steuerfreiheit, elterliche Kontrolle und Flexibilität"
               className="h-auto min-w-[280px] w-full shrink-0 object-contain lg:w-[538px] lg:max-w-[538px]"
               width={800}

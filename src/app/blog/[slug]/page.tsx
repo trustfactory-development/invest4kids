@@ -64,7 +64,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         <section className="mb-[22px] rounded-[10px] bg-white px-[22px] py-[18px] md:px-[34px] md:py-[34px]">
           <div className="flex flex-wrap items-center gap-x-[30px] gap-y-[14px] text-[#1E293B] font-outfit mb-[24px]">
             <div className="flex items-center gap-[10px] font-outfit">
-              <img src={'https://invest4kids.de/wp-content/uploads/2025/03/Angelina-150x150.png.webp'} alt={post.author.name} className="h-[42px] md:h-[50px] aspect-square rounded-full object-cover" draggable={false} />
+              <img src={post.author.image} alt={post.author.name} className="h-[42px] md:h-[50px] aspect-square rounded-full object-cover" draggable={false} />
               <div className="text-[16px] md:text-[18px] leading-[1.25] text-[#4B5563]">
                 <p className="text-text-dark pb-1">Author:</p>
                 <p className="text-[#4B5563]">{post.author.name}</p>
@@ -193,7 +193,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <section className="md:hidden mb-[22px] rounded-[10px] bg-white px-[22px] py-[18px] md:px-[34px] md:py-[34px]">
             <div className="flex flex-wrap items-center gap-x-[30px] gap-y-[14px] text-[#1E293B] font-outfit mb-[24px]">
               <div className="flex items-center gap-[10px] font-outfit">
-                <img src={'https://invest4kids.de/wp-content/uploads/2025/03/Angelina-150x150.png.webp'} alt={post.author.name} className="h-[42px] md:h-[50px] aspect-square rounded-full object-cover" draggable={false} />
+                <img src={post.author.image} alt={post.author.name} className="h-[42px] md:h-[50px] aspect-square rounded-full object-cover" draggable={false} />
                 <div className="text-[16px] md:text-[18px] leading-[1.25] text-[#4B5563]">
                   <p className="text-text-dark pb-1">Author:</p>
                   <p className="text-[#6C757E]">{post.author.name}</p>

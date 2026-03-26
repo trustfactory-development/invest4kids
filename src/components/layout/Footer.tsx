@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
+import invest4kidsLogo from "@/assets/images/header/invest4kids-logo.png";
 
 type NavChild = {
   label: string;
@@ -101,7 +102,7 @@ export default function Footer() {
             <div className="w-[70px] shrink-0">
               <Link href="https://invest4kids.de/" className="block">
                 <Image
-                    src="https://invest4kids.de/wp-content/uploads/2024/10/Invest-4-kids-logo.png"
+                    src={invest4kidsLogo}
                     alt="Invest4Kids logo"
                     width={70}
                     height={44}
