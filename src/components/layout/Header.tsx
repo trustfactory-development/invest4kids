@@ -236,7 +236,6 @@ export default function Header() {
               width={130}
               height={82}
               className="h-11.25 w-auto"
-              preload
             />
           </Link>
 
@@ -365,10 +364,9 @@ export default function Header() {
             <Image
               src={headerLogoMobile}
               alt="Invest4Kids"
-              width={1000}
-              height={1000}
+              width={2048}
+              height={1295}
               className="h-11 w-auto"
-              preload
             />
           </Link>
 

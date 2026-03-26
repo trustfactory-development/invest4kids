@@ -93,9 +93,11 @@ export default function HeroSection() {
               <Image
                 src={groupPhoto}
                 alt="Das Invest4Kids Team"
-                width={1000}
-                height={1000}
+                width={1059}
+                height={699}
+                sizes="(max-width: 768px) 92vw, 487px"
                 className="h-auto md:w-[487px] object-cover bg-transparent"
+                fetchPriority="high"
                 preload
               />
             </div>

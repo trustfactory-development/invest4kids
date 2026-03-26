@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
@@ -6,6 +7,7 @@ import { Download } from "lucide-react"
 import { getPostBySlug, getPostsByCategorySlug, posts, type ContentBlock } from "@/lib/blogData"
 import BlogPostCard from "@/components/BlogPostCard"
 import MapVimeoSection from "@/components/sections/MapVimeoSection"
+import { parseGermanDate, siteConfig } from "@/lib/site"
 
 function renderBlock(block: ContentBlock, index: number) {
   switch (block.type) {
@@ -45,6 +47,58 @@ function renderBlock(block: ContentBlock, index: number) {
   }
 }
 
+export const dynamicParams = false
+
+export function generateStaticParams() {
+  return posts.map((post) => ({ slug: post.slug }))
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params
+  const post = getPostBySlug(slug)
+
+  if (!post) {
+    return {
+      title: "Artikel nicht gefunden",
+      description: "Der gesuchte Artikel konnte nicht gefunden werden.",
+      robots: {
+        index: false,
+        follow: false,
+      },
+    }
+  }
+
+  const title = `${post.title} | Invest4Kids Blog`
+  const description = post.excerpt
+  const publishedDate = parseGermanDate(post.publishedAt)
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: `/blog/${post.slug}`,
+    },
+    openGraph: {
+      title,
+      description,
+      url: `/blog/${post.slug}`,
+      type: "article",
+      locale: siteConfig.locale,
+      images: [{ url: post.image, alt: post.title }],
+      publishedTime: publishedDate?.toISOString(),
+      authors: [post.author.name],
+      section: post.category.name,
+      tags: [post.category.name, "Invest4Kids Blog"],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [post.image],
+    },
+  }
+}
+
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   const post = getPostBySlug(slug)
@@ -58,9 +112,35 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     relatedPosts.length < 3
       ? relatedPosts
       : [...relatedPosts, ...posts.filter((item) => item.slug !== post.slug && !relatedPosts.some((related) => related.slug === item.slug))].slice(0, 3)
+  const publishedDate = parseGermanDate(post.publishedAt)
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: publishedDate?.toISOString(),
+    author: {
+      "@type": "Person",
+      name: post.author.name,
+    },
+    image: [`${siteConfig.url}${post.image}`],
+    mainEntityOfPage: `${siteConfig.url}/blog/${post.slug}`,
+    publisher: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteConfig.url}${siteConfig.ogImage}`,
+      },
+    },
+  }
 
   return (
     <main className="min-h-screen bg-[#EFFAFD] px-[20px] py-[26px] sm:px-[20px] md:px-[30px] md:py-[100px]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <div className="mx-auto max-w-[1100px]">
         <section className="mb-[22px] rounded-[10px] bg-white px-[22px] py-[18px] md:px-[34px] md:py-[34px]">
           <div className="flex flex-wrap items-center gap-x-[30px] gap-y-[14px] text-[#1E293B] font-outfit mb-[24px]">
