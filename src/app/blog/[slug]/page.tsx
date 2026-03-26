@@ -256,7 +256,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
           <div className="mt-[20px] grid gap-[24px] md:grid-cols-3">
             {recommendedPosts.map((post) => (
-              <BlogPostCard key={post.slug} post={post} />
+              <BlogPostCard key={post.slug} post={post} showExcerpt />
             ))}
           </div>
         </div>

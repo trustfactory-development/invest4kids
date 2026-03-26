@@ -28,7 +28,7 @@ export default function NewPodcastHostsSection() {
             </p>
             <div className="flex items-start gap-3.5 rounded-xl bg-[#F9FAFB]">
               <QuoteIcon />
-              <p className="font-poppins text-[15px] md:text-lg font-light leading-[1.5] text-primary">
+              <p className="font-poppins text-[15px] md:text-lg font-[400] leading-[1.2] text-primary">
                 Die Zukunft ist unsicher. Ein Plan gibt Sicherheit, um Kinder zuverlässig zu unterstützen.
               </p>
             </div>
@@ -43,7 +43,7 @@ export default function NewPodcastHostsSection() {
             </p>
             <div className="flex items-start gap-3.5 rounded-xl bg-[#F9FAFB]">
               <QuoteIcon />
-              <p className="font-poppins text-[15px] md:text-lg font-light leading-[1.5] text-primary">
+              <p className="font-poppins text-[15px] md:text-lg font-[400] leading-[1.2] text-primary">
                 Die Zukunft ist unsicher. Ein Plan gibt Sicherheit, um Kinder zuverlässig zu unterstützen.
               </p>
             </div>

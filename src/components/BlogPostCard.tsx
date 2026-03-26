@@ -1,7 +1,7 @@
 import Link from "next/link"
 import type { BlogPost } from "@/lib/blogData"
 
-export default function BlogPostCard({ post }: { post: BlogPost }) {
+export default function BlogPostCard({ post, showExcerpt = false }: { post: BlogPost; showExcerpt?: boolean }) {
   return (
     <div className="flex w-full sm:max-w-[348px] h-full flex-col overflow-hidden rounded-[10px] border border-[#D4DADF] bg-[#FDFDFD]">
       <Link href={`/blog/${post.slug}`} className="block">
@@ -20,9 +20,11 @@ export default function BlogPostCard({ post }: { post: BlogPost }) {
           </Link>
         </h3>
 
-        <p className="mt-[10px] line-clamp-2 font-outfit text-[16px] leading-[1.5] text-[#4B5563] md:text-[18px]">
-          {post.excerpt}
-        </p>
+        {showExcerpt && (
+          <p className="mt-[10px] line-clamp-2 font-outfit text-[16px] leading-[1.5] text-[#4B5563] md:text-[18px]">
+            {post.excerpt}
+          </p>
+        )}
 
         <div className="flex flex-wrap gap-[6px] pt-[21px] pb-[16px] border-b border-[#E4E4E7]">
           <Link

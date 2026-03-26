@@ -26,7 +26,7 @@ export default function BlogPage() {
 
   return (
     <main className="min-h-screen bg-[#EAF5FA]">
-      <section className="px-[16px] py-[50px] md:py-[100px]">
+      <section className="px-[16px] pt-[50px] md:pt-[100px]">
         <div className="mx-auto max-w-[1120px]">
           <div className="max-w-[1100px] rounded-[10px] bg-white/40">
             <div className="inline-flex items-center gap-[8px] rounded-full border border-[#E2B448] bg-bg-cream px-[16px] py-[6px] text-[10px] md:text-[12px] leading-none text-[#4B5563]">
@@ -74,7 +74,7 @@ export default function BlogPage() {
 
       {featuredPost ? (
         <>
-          <section className="px-[16px] pb-[32px] sm:px-[20px] md:px-[28px] md:pb-[40px]">
+          <section className="px-[16px] pb-[32px] sm:px-[20px] md:px-[28px] md:pb-[40px] pt-[34px]">
             <div className="mx-auto grid max-w-[1100px] gap-[16px] md:gap-[25px] md:grid-cols-[1fr_1fr]">
               <div className="overflow-hidden rounded-[10px] border border-[#D4DADF] bg-[#FDFDFD]">
                 <Link href={`/blog/${featuredPost.slug}`} className="block">
@@ -82,7 +82,7 @@ export default function BlogPage() {
                 </Link>
 
                 <div className="bg-[#F8F9FA] p-[16px] md:p-[34px]">
-                  <h2 className="text-[16px] font-[600] leading-[1.3] tracking-[-0.01em] text-[#2E4259] md:text-[18px]">
+                  <h2 className="text-[16px] font-bold leading-[1.3] tracking-[-0.01em] text-[#2E4259] md:text-[18px]">
                     <Link href={`/blog/${featuredPost.slug}`} className="transition-colors duration-300 font-bold hover:text-[#173F88] line-clamp-1 truncate">
                       {featuredPost.title}
                     </Link>
@@ -135,14 +135,14 @@ export default function BlogPage() {
 
               <div className="grid content-start gap-[12px]">
                 {secondaryPosts.map((post) => (
-                  <div key={post.slug} className="rounded-[10px] border border-[#D4DADF] bg-[#F8F9FA] p-[14px] md:p-[16px]">
+                  <div key={post.slug} className="rounded-[10px] border border-[#D4DADF] bg-[#F8F9FA] p-[14px] md:p-[34px]">
                     <div>
-                      <h3 className="text-[16px] font-[600] leading-[1.3] tracking-[-0.01em] text-[#2E4259] md:text-[17px]">
+                      <h3 className="text-[16px] font-bold leading-[1.3] tracking-[-0.01em] text-[#2E4259] md:text-[17px]">
                         <Link href={`/blog/${post.slug}`} className="transition-colors duration-300 hover:text-[#173F88]">
                           {post.title}
                         </Link>
                       </h3>
-                      <div className="mt-[10px] flex flex-wrap gap-x-[6px] gap-y-[8px] border-b border-[#D7DDE1] pb-[10px]">
+                      <div className="flex flex-wrap font-outfit gap-x-[6px] gap-y-[8px] border-b border-[#D7DDE1] pb-[10px] md:pt-[21px] md:pb-[16px]">
                         <Link
                           href={`/author/${post.author.slug}`}
                           className="inline-flex h-[31px] items-center rounded-full border border-[#84B7CA] bg-[#D8ECF5] px-[18px] text-[12px] font-[500] uppercase leading-none text-[#2E4259] transition-colors duration-300 hover:bg-[#c7e4f1]"
@@ -157,7 +157,7 @@ export default function BlogPage() {
                         </Link>
                       </div>
 
-                      <div className="flex flex-wrap items-end gap-x-[10px] gap-y-[5px] pt-[10px] md:flex-nowrap font-outfit ">
+                      <div className="flex flex-wrap items-end gap-x-[10px] gap-y-[5px] pt-[10px] md:pt-[16px] md:flex-nowrap font-outfit ">
                         <div className="flex items-center gap-[8px] text-[16px] leading-none text-[#6C757E] md:text-[18px]">
                           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 16 17" fill="none" className="shrink-0">
                             <path d="M14.6667 1.30769H12.6667V0.653846C12.6667 0.480435 12.5964 0.314127 12.4714 0.191507C12.3464 0.0688871 12.1768 0 12 0C11.8232 0 11.6536 0.0688871 11.5286 0.191507C11.4036 0.314127 11.3333 0.480435 11.3333 0.653846V1.30769H4.66667V0.653846C4.66667 0.480435 4.59643 0.314127 4.4714 0.191507C4.34638 0.0688871 4.17681 0 4 0C3.82319 0 3.65362 0.0688871 3.5286 0.191507C3.40357 0.314127 3.33333 0.480435 3.33333 0.653846V1.30769H1.33333C0.979711 1.30769 0.640573 1.44547 0.390524 1.69071C0.140476 1.93595 0 2.26856 0 2.61538V15.6923C0 16.0391 0.140476 16.3717 0.390524 16.617C0.640573 16.8622 0.979711 17 1.33333 17H14.6667C15.0203 17 15.3594 16.8622 15.6095 16.617C15.8595 16.3717 16 16.0391 16 15.6923V2.61538C16 2.26856 15.8595 1.93595 15.6095 1.69071C15.3594 1.44547 15.0203 1.30769 14.6667 1.30769ZM3.33333 2.61538V3.26923C3.33333 3.44264 3.40357 3.60895 3.5286 3.73157C3.65362 3.85419 3.82319 3.92308 4 3.92308C4.17681 3.92308 4.34638 3.85419 4.4714 3.73157C4.59643 3.60895 4.66667 3.44264 4.66667 3.26923V2.61538H11.3333V3.26923C11.3333 3.44264 11.4036 3.60895 11.5286 3.73157C11.6536 3.85419 11.8232 3.92308 12 3.92308C12.1768 3.92308 12.3464 3.85419 12.4714 3.73157C12.5964 3.60895 12.6667 3.44264 12.6667 3.26923V2.61538H14.6667V5.23077H1.33333V2.61538H3.33333ZM14.6667 15.6923H1.33333V6.53846H14.6667V15.6923Z" fill="#6C757E" />

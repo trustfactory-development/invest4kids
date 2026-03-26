@@ -546,20 +546,25 @@ export default function Header() {
 
               {/* Language Switcher */}
               <div className="mt-4 flex items-center justify-center gap-3">
-                <Image
-                  src={flagDe}
-                  width={28}
-                  height={20}
-                  alt="Deutsch"
-                  className="cursor-pointer rounded-sm border border-primary/30"
-                />
-                <Image
-                  src={flagGb}
-                  width={28}
-                  height={20}
-                  alt="English"
-                  className="cursor-pointer rounded-sm opacity-60 transition-opacity hover:opacity-100"
-                />
+                <div className="border-b-[0.2px] border-dark pb-1">
+                  <Image
+                    src={flagDe}
+                    width={30}
+                    height={30}
+                    alt="Deutsch"
+                    className="w-6 aspect-square cursor-pointer rounded-full object-cover"
+                  />
+                </div>
+                
+                <div>
+                  <Image
+                    src={flagGb}
+                    width={30}
+                    height={30}
+                    alt="English"
+                    className="w-6 aspect-square cursor-pointer rounded-full object-cover"
+                  />
+                </div>
               </div>
             </div>
           </div>
