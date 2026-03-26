@@ -1,11 +1,14 @@
 import Image from "next/image";
+import DeferredVideoPlayer from "@/components/media/DeferredVideoPlayer";
+import { getLocalVideoUrl, type LocalVideoId } from "@/lib/localVideos";
 
 type Testimonial = {
   initial: string;
   name: string;
   role: string;
   text: string;
-  video: string;
+  poster: string;
+  video: LocalVideoId;
 };
 
 const testimonials: Testimonial[] = [
@@ -14,24 +17,24 @@ const testimonials: Testimonial[] = [
     name: "Laura",
     role: "mother of a son",
     text: "Invest4Kids was always there to offer me advice and support.",
-    video:
-      "https://invest4kids.de/wp-content/uploads/2026/01/Beratung-Laura-351x274-1.mov",
+    poster: "/media-posters/testimonial-laura.jpg",
+    video: "testimonial-laura",
   },
   {
     initial: "O",
     name: "Oliver",
     role: "Father of two children",
     text: "A well-thought-out way to invest wisely in funds and ETFs for children.",
-    video:
-      "https://invest4kids.de/wp-content/uploads/2026/01/Beratung-Oliver-351x274-1.mov",
+    poster: "/media-posters/testimonial-oliver.jpg",
+    video: "testimonial-oliver",
   },
   {
     initial: "Y",
     name: "Yvonne",
     role: "Mother of 2 children",
     text: "From the outset, the consultation felt professional and positive.",
-    video:
-      "https://invest4kids.de/wp-content/uploads/2026/01/Beratung-Yvonne-351x274-1.mov",
+    poster: "/media-posters/testimonial-yvonne.jpg",
+    video: "testimonial-yvonne",
   },
 ];
 
@@ -125,14 +128,14 @@ export default function TestimonialsSection({
           {testimonials.map((item) => (
             <div key={item.name} className="flex flex-col gap-4">
               <div className="overflow-hidden rounded-[20px] shadow-[2px_8px_20px_0px_#0000000A]">
-                <video
-                  className="aspect-[4/3] w-full bg-black object-cover"
-                  controls
-                  preload="metadata"
-                  playsInline
-                >
-                  <source src={item.video} type="video/mp4" />
-                </video>
+                <DeferredVideoPlayer
+                  aspectRatioClassName="aspect-[4/3] w-full"
+                  imageSizes="(max-width: 1280px) 100vw, 340px"
+                  posterAlt={`${item.name} testimonial preview`}
+                  posterSrc={item.poster}
+                  title={`${item.name} testimonial`}
+                  videoSrc={getLocalVideoUrl(item.video)}
+                />
               </div>
 
               <article className="rounded-[21px] bg-white p-6 md:p-8.5 shadow-[2px_8px_20px_0px_#0000000A]">

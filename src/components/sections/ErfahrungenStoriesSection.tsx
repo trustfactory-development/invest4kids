@@ -8,42 +8,38 @@ import oliverImage from "@/assets/images/erfahrungen/oliver.webp";
 import sarahImage from "@/assets/images/erfahrungen/sarah.webp";
 import storyImage from "@/assets/images/erfahrungen/story-image.webp";
 import yvonneImage from "@/assets/images/erfahrungen/yvonne.webp";
+import { getLocalVideoUrl, type LocalVideoId } from "@/lib/localVideos";
 
 const stories = [
   {
     name: "Yvonne",
     role: "Mutter von 2 Kindern",
     image: yvonneImage.src,
-    video:
-      "https://invest4kids.de/wp-content/uploads/2025/12/Yvonne-351x274-1.mov",
+    video: "story-yvonne" as LocalVideoId,
   },
   {
     name: "Oliver",
     role: "Vater von 2 Söhnen",
     image: oliverImage.src,
-    video:
-      "https://invest4kids.de/wp-content/uploads/2025/12/Oliver-Frohnert-351x274-1.mov",
+    video: "story-oliver" as LocalVideoId,
   },
   {
     name: "Laura",
     role: "Mutter von einem Sohn",
     image: lauraImage.src,
-    video:
-      "https://invest4kids.de/wp-content/uploads/2025/12/Laura-Steinhaeuser-351x274-1.mov",
+    video: "story-laura" as LocalVideoId,
   },
   {
     name: "Sarah",
     role: "Mutter von 2 Töchtern",
     image: sarahImage.src,
-    video:
-      "https://invest4kids.de/wp-content/uploads/2025/12/Sarah-Siegmund-351x274-1.mov",
+    video: "story-sarah" as LocalVideoId,
   },
   {
     name: "Margot",
     role: "Mutter von 2 Söhnen",
     image: margotImage.src,
-    video:
-      "https://invest4kids.de/wp-content/uploads/2025/12/Margot-351x274-1.mov",
+    video: "story-margot" as LocalVideoId,
   },
 ];
 
@@ -290,8 +286,9 @@ export default function ErfahrungenStoriesSection() {
                 preload="metadata"
                 controlsList="nodownload"
                 playsInline
+                poster={activeStory.image}
               >
-                <source src={activeStory.video} type="video/mp4" />
+                <source src={getLocalVideoUrl(activeStory.video)} />
               </video>
             </div>
           </div>

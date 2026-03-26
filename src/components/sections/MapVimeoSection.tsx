@@ -1,27 +1,24 @@
+import groupPhoto from "@/assets/images/home/hero/group-photo.webp";
 import footerMap from "@/assets/images/home/map/footer-map.png";
+import DeferredEmbedPlayer from "@/components/media/DeferredEmbedPlayer";
 
 export default function MapVimeoSection() {
   const renderVideo = () => (
-    <div className="overflow-hidden rounded-[20px]">
-      <div className="relative aspect-[9/16] w-full">
-        <iframe
-            src="https://player.vimeo.com/video/1162162723?h=5f5a57089c?color&amp;autopause=0&amp;loop=0&amp;muted=0&amp;title=0&amp;portrait=0&amp;byline=0#t="
-            className="absolute inset-0 h-full w-full"
-            title="Wer ist Invest4Kids? Vimeo Video"
-            allow="clipboard-write"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-            data-gtm-yt-inspected-12="true"
-        />
-      </div>
-    </div>
+    <DeferredEmbedPlayer
+      aspectRatioClassName="aspect-[9/16] w-full"
+      embedUrl="https://player.vimeo.com/video/1162162723?autoplay=1&h=5f5a57089c&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0"
+      imageSizes="(max-width: 768px) 100vw, 350px"
+      posterAlt="Invest4Kids team preview"
+      posterSrc={groupPhoto}
+      title="Wer ist Invest4Kids? Vimeo Video"
+    />
   );
 
   return (
-      <section
-          className="bg-[#FBFBFB] bg-[position:top_left] bg-cover bg-no-repeat px-5 py-[50px] md:bg-auto md:bg-[position:bottom_center] md:bg-repeat md:px-0 md:py-[100px]"
-          style={{
-            backgroundImage: `url(${footerMap.src})`,
+    <section
+      className="bg-[#FBFBFB] bg-[position:top_left] bg-cover bg-no-repeat px-5 py-[50px] md:bg-auto md:bg-[position:bottom_center] md:bg-repeat md:px-0 md:py-[100px]"
+      style={{
+        backgroundImage: `url(${footerMap.src})`,
       }}
     >
       <div className="mx-auto flex max-w-[1100px] flex-col items-center justify-center gap-0 md:flex-row md:items-center md:gap-12">

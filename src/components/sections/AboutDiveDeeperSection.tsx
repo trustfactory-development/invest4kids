@@ -1,4 +1,5 @@
 import { Headphones } from "lucide-react";
+import DeferredEmbedPlayer from "@/components/media/DeferredEmbedPlayer";
 
 export function AboutDiveDeeperSection() {
   return (
@@ -53,16 +54,14 @@ export function AboutDiveDeeperSection() {
             </div>
 
             <div className="w-full overflow-hidden rounded-[20px] lg:w-[450px]">
-              <div className="aspect-video overflow-hidden rounded-[17px]">
-                <iframe
-                  src="https://www.youtube.com/embed/JIjQb4xj0bg" 
-                  nitro-lazy-src="data:text/html;base64,PGJvZHkgc3R5bGU9J3dpZHRoOjEwMCU7aGVpZ2h0OjEwMCU7bWFyZ2luOjA7cGFkZGluZzowO2JhY2tncm91bmQ6dXJsKGh0dHBzOi8vaW1nLnlvdXR1YmUuY29tL3ZpL0pJalFiNHhqMGJnLzAuanBnKSBjZW50ZXIvMTAwJSBuby1yZXBlYXQ7YmFja2dyb3VuZC1zaXplOiBjb3ZlcjsnPjxzdHlsZT5ib2R5ey0tYnRuQmFja2dyb3VuZDpyZ2JhKDAsMCwwLC42NSk7fWJvZHk6aG92ZXJ7LS1idG5CYWNrZ3JvdW5kOnJnYmEoMCwwLDApO2N1cnNvcjpwb2ludGVyO31idXR0b24jcGxheUJ0bntkaXNwbGF5OmZsZXg7YWxpZ24taXRlbXM6Y2VudGVyO2p1c3RpZnktY29udGVudDpjZW50ZXI7Y2xlYXI6Ym90aDt3aWR0aDoxMDBweDtoZWlnaHQ6NzBweDtmb250LXNpemU6NDVweDtiYWNrZ3JvdW5kOnZhcigtLWJ0bkJhY2tncm91bmQpO3RleHQtYWxpZ246Y2VudGVyO2NvbG9yOiNmZmY7Ym9yZGVyLXJhZGl1czoxOHB4O3ZlcnRpY2FsLWFsaWduOm1pZGRsZTtwb3NpdGlvbjphYnNvbHV0ZTt0b3A6NTAlO2xlZnQ6NTAlO21hcmdpbi1sZWZ0Oi01MHB4O21hcmdpbi10b3A6LTM1cHg7Ym9yZGVyOm5vbmU7cGFkZGluZzowO2N1cnNvcjpwb2ludGVyO291dGxpbmU6bm9uZTt9YnV0dG9uI3BsYXlCdG46Zm9jdXN7b3V0bGluZToycHggc29saWQgIzAwN2JmZjtvdXRsaW5lLW9mZnNldDoycHg7fSNwbGF5QXJyb3d7d2lkdGg6MDtoZWlnaHQ6MDtib3JkZXItdG9wOjE1cHggc29saWQgdHJhbnNwYXJlbnQ7Ym9yZGVyLWJvdHRvbToxNXB4IHNvbGlkIHRyYW5zcGFyZW50O2JvcmRlci1sZWZ0OjI1cHggc29saWQgI2ZmZjt9PC9zdHlsZT48YnV0dG9uIGlkPSdwbGF5QnRuJz48ZGl2IGlkPSdwbGF5QXJyb3cnPjwvZGl2PjwvYnV0dG9uPjxzY3JpcHQ+ZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3BsYXlCdG4nKS5hZGRFdmVudExpc3RlbmVyKCdjbGljaycsIGZ1bmN0aW9uKCl7d2luZG93LnBhcmVudC5wb3N0TWVzc2FnZSh7YWN0aW9uOiAncGxheUJ0bkNsaWNrZWQnfSwgJyonKTt9KTs8L3NjcmlwdD48L2JvZHk+"                  title="Episode 58: Our mission at Invest4Kids"
-                  allow="autoplay; clipboard-write; encrypted-media; gyroscope;"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                  className="h-full w-full border-0"
-                />
-              </div>
+              <DeferredEmbedPlayer
+                aspectRatioClassName="aspect-video rounded-[17px]"
+                embedUrl="https://www.youtube.com/embed/JIjQb4xj0bg?autoplay=1&rel=0"
+                imageSizes="(max-width: 1024px) 100vw, 450px"
+                posterAlt="Episode 58 podcast preview"
+                posterSrc="/podcast/episode-71.jpg"
+                title="Episode 58: Our mission at Invest4Kids"
+              />
             </div>
 
             <div className="w-full font-outfit text-[16px] leading-5.25 font-light text-[#4B5563] lg:hidden">

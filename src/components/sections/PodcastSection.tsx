@@ -1,8 +1,9 @@
 "use client";
 
 import { Headphones } from "lucide-react";
+import DeferredEmbedPlayer from "@/components/media/DeferredEmbedPlayer";
 
-const EMBED_URL = "https://www.youtube.com/embed/B4sfJBmJDi0";
+const EMBED_URL = "https://www.youtube.com/embed/B4sfJBmJDi0?autoplay=1&rel=0";
 
 export default function PodcastSection() {
   return (
@@ -56,16 +57,14 @@ export default function PodcastSection() {
 
             {/* Media player */}
             <div className="order-2 rounded-[22px]">
-              <div className="relative overflow-hidden rounded-[22px]">
-                <iframe
-                  src={EMBED_URL}
-                  title="Invest4Kids podcast episode"
-                  className="aspect-video w-full rounded-[22px] border-0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                />
-              </div>
+              <DeferredEmbedPlayer
+                aspectRatioClassName="aspect-video w-full rounded-[22px]"
+                embedUrl={EMBED_URL}
+                imageSizes="(max-width: 1024px) 100vw, 452px"
+                posterAlt="Invest4Kids podcast episode preview"
+                posterSrc="/podcast/episode-72.jpg"
+                title="Invest4Kids podcast episode"
+              />
               <p className="mt-6 max-w-155 font-outfit text-[16px] leading-[1.3] font-normal text-[#4B5563] md:text-[18px] md:leading-[1.4] lg:hidden">
                 Torben and Susanna take you behind the scenes: How do the
                 interviews work? What are the real benefits of counseling? And
