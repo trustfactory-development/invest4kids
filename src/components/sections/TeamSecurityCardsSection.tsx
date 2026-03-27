@@ -22,7 +22,7 @@ export function TeamSecurityCardsSection() {
     <section className="bg-[linear-gradient(103deg,#F2FAFA_-2%,#FFFAEE_100%)] px-5 py-[50px] lg:px-[30px] lg:py-[100px]">
       <div className="mx-auto flex w-full max-w-[1100px] flex-col gap-6 md:flex-row">
         <div className="w-full rounded-[20px] bg-[#FFFFFFB8] px-6 py-6 shadow-[2px_8px_20px_0_rgba(0,0,0,0.04)] md:w-[calc(50%-12px)] md:px-[34px] md:py-[34px]">
-          <h2 className="mb-4 font-poppins text-[22px] leading-[150%] font-extrabold text-text-medium md:mb-6 md:text-[28px] md:leading-[125%]">
+          <h2 className="mb-4 font-poppins text-[22px] leading-[150%] font-bold md:font-extrabold text-text-medium md:mb-6 md:text-[28px] md:leading-[125%]">
             Weil wir selbst wissen, wie wichtig finanzielle Sicherheit für Kinder ist
           </h2>
 

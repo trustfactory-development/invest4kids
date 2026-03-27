@@ -7,7 +7,7 @@ export default function NewPodcastCtaSection() {
       <div className="flex w-full max-w-[1100px] flex-col justify-center">
         <div className="flex flex-col items-center md:gap-[80px] gap-10 lg:flex-row">
           <div className="min-w-0 flex-1">
-            <h1 className="mb-5 font-poppins text-[26px] font-extrabold leading-[1.25] text-text-medium sm:text-[32px]">
+            <h1 className="mb-5 font-poppins text-[27px] font-bold md:font-extrabold leading-[1.25] text-text-medium sm:text-[32px]">
               Bereit, das Beste aus deinem Geld für dein Kind zu machen?
             </h1>
             <p className="mb-7 font-outfit text-base leading-[1.6] text-text-medium">

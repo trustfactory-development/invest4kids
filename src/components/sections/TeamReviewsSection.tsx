@@ -121,7 +121,7 @@ export function TeamReviewsSection() {
   return (
     <section className="bg-[#FBFBFB] px-5 py-[100px] lg:px-[30px] lg:py-[150px]">
       <div className="mx-auto w-full max-w-[1100px]">
-        <h2 className="mb-[34px] text-center font-poppins text-[27px] leading-[150%] font-extrabold text-text-medium md:text-[34px] md:leading-[125%]">
+        <h2 className="mb-[34px] text-center font-poppins text-[27px] leading-[150%] font-bold md:font-extrabold text-text-medium md:text-[34px] md:leading-[125%]">
           Was Familien über unser Team sagen
         </h2>
 

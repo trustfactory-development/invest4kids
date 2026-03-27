@@ -42,10 +42,10 @@ export default function ErfahrungenDMsSection() {
   return (
     <section className="bg-white px-[20px] py-[60px] sm:px-[24px] sm:py-[80px] md:px-[30px] md:py-[100px]">
       <div className="mx-auto max-w-[1100px]">
-        <div className="flex flex-col lg:flex-row items-center gap-[72px] lg:justify-between md:gap-[150px]">
+        <div className="flex flex-col lg:flex-row items-center gap-[24px] lg:justify-between md:gap-[150px]">
           {/* LEFT CONTENT */}
           <div className="">
-            <h2 className="w-full text-[27px] leading-[1.25] font-[800] text-[#2C3E50] sm:text-[30px] md:text-[34px]">
+            <h2 className="w-full text-[27px] text-center md:text-start leading-[1.25] font-[800] text-[#2C3E50] sm:text-[30px] md:text-[34px]">
               <span className="block">
                 Nachrichten aus unserer Community
               </span>
@@ -54,14 +54,14 @@ export default function ErfahrungenDMsSection() {
               </span>
             </h2>
 
-            <p className="mt-[12px] max-w-[500px] font-medium text-[16px] leading-[23px] font-[300] text-[#4B5563] sm:text-[18px] md:mt-[14px] md:text-[20px]">
+            <p className="mt-[12px] text-center md:text-start max-w-[500px] font-medium text-[16px] leading-[23px] font-[300] text-[#4B5563] sm:text-[18px] md:mt-[14px] md:text-[20px]">
               Echte Einblicke von Familien, die ihre Erfahrungen mit
               Invest4Kids teilen.
             </p>
 
-            <div className="mt-[14px] h-[3px] w-[96px] bg-[#84B7CA] md:mt-[16px]" />
+            <div className="mt-[14px] h-[3px] w-[96px] bg-[#84B7CA] mx-auto md:mx-0 md:mt-[16px]" />
 
-            <div className="mt-[14px] flex items-center gap-[12px] md:mt-[16px]">
+            <div className="mt-[14px] flex items-center gap-[12px] justify-center md:justify-start md:mt-[16px]">
               <Image
                 src={dmsStatsImages.src}
                 alt="people"
@@ -75,7 +75,7 @@ export default function ErfahrungenDMsSection() {
               </p>
             </div>
 
-            <div className="pt-[48px] space-y-[10px] md:space-y-[12px] ">
+            <div className="pt-[24px] md:pt-[48px] space-y-[10px] md:space-y-[12px] ">
               <div className="inline-flex min-h-[38px] font-outfit w-full max-w-[412px] items-center rounded-full bg-[#E9E7E1] px-[18px] py-[10px] text-[16px] leading-[1.15] font-medium tracking-[-0.015em] text-[#556274] md:min-h-[42px] md:px-[34px] md:text-[18px]">
                 &ldquo; Einfach nur top!
               </div>
@@ -182,7 +182,7 @@ export default function ErfahrungenDMsSection() {
                           draggable={false}
                         />
 
-                        <div className="max-w-[198px] rounded-[20px] bg-[#ECEBE9] px-[14px] py-[12px] text-[13px] leading-[1.42] font-[400] tracking-[-0.01em] text-black shadow-[0_1px_0_rgba(0,0,0,0.02)] sm:max-w-[220px] sm:px-[15px] sm:py-[13px] sm:text-[14px] md:max-w-[236px] md:rounded-[22px] md:px-[16px] md:py-[14px] md:text-[15px]">
+                        <div className="rounded-[20px] bg-[#ECEBE9] font-outfit px-[14px] py-[12px] text-[16px] leading-[1.42] font-[400] tracking-[-0.01em] text-black shadow-[0_1px_0_rgba(0,0,0,0.02)] sm:max-w-[220px] sm:px-[15px] sm:py-[13px] sm:text-[14px] max-w-[236px] md:rounded-[22px] md:px-[16px] md:py-[14px] md:text-[15px]">
                           {message.text.split("\n").map((line, lineIndex) => (
                             <p
                               key={lineIndex}

@@ -308,7 +308,7 @@ export function PressPageSections() {
               </div>
 
               <div className="flex flex-1 flex-col items-center text-center lg:items-start lg:text-left">
-                <h2 className="font-poppins text-[27px] leading-[150%] font-extrabold text-[#2C3E50] md:text-[28px] md:leading-[125%]">
+                <h2 className="font-poppins text-[22px] leading-[150%] font-extrabold text-[#2C3E50] md:text-[28px] md:leading-[125%]">
                   Kontakt
                 </h2>
                 <p className="mt-4 w-full border-l-[3px] border-[#84B7CA] pl-4 font-outfit text-[16px] leading-[126%] text-[#4B5563] md:text-[18px] md:leading-[32px]">
@@ -340,7 +340,7 @@ export function PressPageSections() {
             <p className="font-poppins text-[18px] leading-[150%] font-medium text-white md:text-[20px]">
               Studie:
             </p>
-            <p className="font-outfit leading-[140%] font-medium text-white text-[32px] px-2 md:px-0">
+            <p className="font-outfit leading-[140%] font-medium text-white text-[32px]">
               Eltern und Finanzen junger Erwachsener (2025)
             </p>
             <Link

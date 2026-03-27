@@ -226,7 +226,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white px-5 shadow-[0_14px_50px_rgba(0,0,0,0.14)]">
+    <header className="sticky top-0 z-50 w-full bg-white/40 backdrop-blur-xl shadow-[0_1px_0_rgba(255,255,255,0.3)_inset,0_14px_50px_rgba(0,0,0,0.08)] border-b border-white/30 lg:bg-white lg:backdrop-blur-none lg:shadow-[0_14px_50px_rgba(0,0,0,0.14)] lg:border-b-0 px-5">
       <Container className="px-0 w-full max-w-275!">
         <div className="hidden h-30 items-center py-8.75 lg:flex ">
           <Link href="/" className="shrink-0">

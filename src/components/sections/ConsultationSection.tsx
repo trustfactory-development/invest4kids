@@ -26,7 +26,7 @@ export default function ConsultationSection() {
       <div className=" mx-auto grid w-full max-w-271 items-start gap-5 overflow-hidden px-5 sm:px-8 lg:grid-cols-[444px_minmax(0,1fr)] lg:items-center lg:gap-13 lg:px-0">
         {/* Left content */}
         <div className="justify-self-start">
-          <header className="max-w-111.5">
+          <header className="max-w-111.5">`
             <h1 className="font-poppins text-[27px] leading-tight font-bold md:font-extrabold text-text-medium md:text-[34px] tracking-[0.02em]">
               Unsere Beratung
             </h1>

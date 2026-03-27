@@ -28,7 +28,7 @@ export function AboutDiveDeeperSection() {
                   <p className="font-outfit text-[16px] leading-none font-medium text-text-medium lg:text-[18px]">
                     KINDERleicht Investing
                   </p>
-                  <p className="mt-2 font-outfit text-[12px] leading-none font-normal text-[#4B5563]">
+                  <p className="mt-2 font-outfit text-[10px] md:text-[12px] leading-none font-normal text-[#4B5563]">
                     Podcast
                   </p>
                 </div>

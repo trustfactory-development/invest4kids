@@ -20,7 +20,7 @@ export function TeamHeroSection() {
         </div>
 
         <div className="relative -mt-6 mx-5 rounded-[20px] bg-[#FFFFFFB8] px-5 pb-6 pt-6 md:-mt-15 md:mx-5 md:px-8.5 md:pb-8.5 md:pt-8.5 lg:-mt-19.5 lg:mx-0">
-          <h1 className="mb-4 text-center font-poppins text-[27px] leading-[150%] font-extrabold text-text-medium md:text-[34px] md:leading-[125%]">
+          <h1 className="mb-4 text-center font-poppins text-[27px] leading-[150%] font-bold md:font-extrabold text-text-medium md:text-[34px] md:leading-[125%]">
             Who advises you at Invest4Kids
           </h1>
 

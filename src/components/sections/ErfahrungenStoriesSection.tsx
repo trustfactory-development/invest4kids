@@ -109,7 +109,7 @@ export default function ErfahrungenStoriesSection() {
         </div>
 
         {/* profile list */}
-        <div className="mt-[28px] mx-4 flex flex-wrap justify-center gap-[40px] md:mt-[45px] md:flex-nowrap md:justify-between">
+        <div className="mt-[28px] mx-4 flex gap-0 overflow-x-auto pb-4 md:mt-[45px] md:gap-[40px] md:justify-between scrollbar-hide">
           {stories.map((story, index) => (
             <button
               key={story.name}

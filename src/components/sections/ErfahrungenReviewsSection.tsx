@@ -346,11 +346,11 @@ export default function ErfahrungenReviewsSection() {
       <div className="mx-auto max-w-[1100px]">
         {/* heading */}
         <div className="mx-auto max-w-[920px] text-center">
-          <h2 className="text-[27px] leading-[1.25] font-[800] text-[#2C3E50] sm:text-[30px] md:text-[34px]">
+          <h2 className="text-[27px] leading-[1.25] font-bold md:font-[800] text-[#2C3E50] sm:text-[30px] md:text-[34px]">
             Bewertungen auf Google &amp; Trustpilot
           </h2>
 
-          <p className="mx-auto mt-[18px] max-w-[860px] font-medium text-[16px] leading-[1.42] font-[300] text-[#4B5563] md:text-[20px]">
+          <p className="mx-auto mt-[18px] max-w-[860px] font-medium text-[18px] leading-[1.42] font-[300] text-[#4B5563] md:text-[20px]">
             Mehr als <span className="text-primary">1000 Eltern</span> haben
             uns auf Trustpilot und Google bewertet – mit durchschnittlich{" "}
             <span className="text-primary">4,9 von 5 Sternen</span>.

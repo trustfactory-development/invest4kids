@@ -12,7 +12,7 @@ export default function VorteilsrechnerPage() {
   return (
     <main>
       <VorteilsrechnerHeroSection />
-      <VorteilsrechnerCalculator showExFields />
+      <VorteilsrechnerCalculator  />
     </main>
   );
 }

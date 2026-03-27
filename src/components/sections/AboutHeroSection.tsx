@@ -12,7 +12,7 @@ export function AboutHeroSection() {
             <span>Mit Liebe seit 2020</span>
           </div>
 
-          <h1 className="mt-4 text-center font-poppins text-[27px] leading-[1.18] font-bold tracking-[-0.03em] text-text-medium md:text-[34px] lg:max-w-90">
+          <h1 className="mt-4 text-center font-poppins text-[27px] leading-[1.6] md:leading-[1.18] font-bold tracking-[-0.03em] text-text-medium md:text-[34px] lg:max-w-90">
             Wer hinter <br />
             <span className="text-[#133a7d]">Invest4Kids</span> steckt
           </h1>

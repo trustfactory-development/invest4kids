@@ -75,14 +75,14 @@ export default function BlogPage() {
 
       {featuredPost ? (
         <>
-          <section className="px-[16px] pb-[32px] sm:px-[20px] md:px-[28px] md:pb-[40px] pt-[34px]">
+          <section className="pb-[32px] px-[20px] md:px-[28px] md:pb-[40px] pt-[34px]">
             <div className="mx-auto grid max-w-[1100px] gap-[16px] md:gap-[25px] md:grid-cols-[1fr_1fr]">
               <div className="overflow-hidden rounded-[10px] border border-[#D4DADF] bg-[#FDFDFD]">
                 <Link href={`/blog/${featuredPost.slug}`} className="block">
                   <Image src={featuredPost.image} alt={featuredPost.title} className="w-full object-cover" width={1000} height={1000} draggable={false} preload />
                 </Link>
 
-                <div className="bg-[#F8F9FA] p-[16px] md:p-[34px]">
+                <div className="bg-[#F8F9FA] p-[24px] md:p-[34px]">
                   <h2 className="text-[16px] font-bold leading-[1.3] tracking-[-0.01em] text-[#2E4259] md:text-[18px]">
                     <Link href={`/blog/${featuredPost.slug}`} className="transition-colors duration-300 font-bold hover:text-[#173F88] line-clamp-1 truncate">
                       {featuredPost.title}
@@ -136,7 +136,7 @@ export default function BlogPage() {
 
               <div className="grid content-start gap-[12px]">
                 {secondaryPosts.map((post) => (
-                  <div key={post.slug} className="rounded-[10px] border border-[#D4DADF] bg-[#F8F9FA] p-[14px] md:p-[34px]">
+                  <div key={post.slug} className="rounded-[10px] border border-[#D4DADF] bg-[#F8F9FA] p-[24px] md:p-[34px]">
                     <div>
                       <h3 className="text-[16px] font-bold leading-[1.3] tracking-[-0.01em] text-[#2E4259] md:text-[17px]">
                         <Link href={`/blog/${post.slug}`} className="transition-colors duration-300 hover:text-[#173F88]">

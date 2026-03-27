@@ -9,7 +9,7 @@ export default function NewPodcastHostsSection() {
       <div className="flex w-full max-w-[1100px] flex-col items-center">
         {/* Header */}
         <div className="mb-[60px] text-center">
-          <h2 className="mb-4 font-poppins text-[26px] font-extrabold text-primary md:text-[34px]">
+          <h2 className="mb-4 font-poppins text-[26px] font-extrabold text-primary! md:text-[34px]">
             Lerne die Hosts kennen
           </h2>
           <p className="mx-auto max-w-[600px] font-outfit text-base md:text-lg leading-[1.6] text-text-medium">
@@ -54,17 +54,17 @@ export default function NewPodcastHostsSection() {
         </div>
 
         {/* Team - image left, text right */}
-        <div className="flex w-full flex-col items-center md:gap-[50px] lg:flex-row md:justify-between">
+        <div className="flex w-full flex-col items-center md:gap-[50px] lg:flex-row md:justify-between ">
           <div className="w-full max-w-[440px] shrink-0 overflow-hidden rounded-2xl lg:w-[440px]">
             <Image src="/podcast/host-team.webp" alt="women" width={888} height={729} className="block h-auto w-full" />
           </div>
-          <div className="flex flex-col md:p-8.5 items-end md:w-full md:max-w-[540px] shadow-xl bg-white rounded-2xl">
-            <p className="mb-5 font-outfit text-base md:text-lg leading-[1.6] text-text-medium p-6 md:p-0">
+          <div className="flex flex-col md:p-8.5 items-end md:w-full md:max-w-[540px] shadow-xl bg-white rounded-2xl p-6">
+            <p className="mb-5 font-outfit text-base md:text-lg leading-[1.6] text-text-medium">
               Immer wieder sind auch Eltern aus dem Invest4Kids-Team zu Gast, darunter Laila und Maike sowie Gründer Bogdan, die ihre persönlichen Erfahrungen, Perspektiven und Geschichten aus der Beratung teilen.
             </p>
             <Link
               href="/team"
-              className="inline-flex w-full md:w-auto max-w-[170px] items-center justify-center gap-2 rounded-full border border-primary-light px-7 py-3 font-outfit text-[16px] font-medium text-text-medium no-underline transition-colors duration-200 hover:border-primary hover:text-primary"
+              className="inline-flex w-full md:w-auto md:max-w-[170px] items-center justify-center gap-2 rounded-full border border-primary-light px-7 py-3 font-outfit text-[16px] font-medium text-text-medium no-underline transition-colors duration-200 hover:border-primary hover:text-primary"
             >
               <span>Zum Team</span>
               <ArrowRightIcon />

@@ -47,7 +47,8 @@ function PodcastEpisodeCard({ item }: { item: VideoItem }) {
           href={`https://www.youtube.com/watch?v=${videoId}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center gap-2 rounded-full border border-border px-6 py-2.5 font-outfit text-sm font-medium text-text-medium no-underline transition-colors duration-200 hover:border-primary hover:text-primary"
+          className="inline-flex items-center justify-center gap-2 rounded-full border border-text-medium px-6 py-2.5 
+          font-outfit text-lg font-medium text-text-medium no-underline transition-colors duration-200 hover:border-primary hover:text-primary"
         >
           <PlayTriangleIcon />
           <span>Jetzt anhören</span>

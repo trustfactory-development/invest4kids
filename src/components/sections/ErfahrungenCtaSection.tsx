@@ -23,17 +23,17 @@ export default function ErfahrungenCtaSection() {
 
           {/* CONTENT */}
           <div className="order-1 lg:order-2">
-            <h2 className="max-w-[560px] text-[27px] leading-[1.25] font-[800] text-white sm:text-[30px] md:text-[34px]">
+            <h2 className="max-w-[560px] text-center md:text-start text-[27px] leading-[1.6] md:leading-[1.25] font-bold md:font-[800] text-white sm:text-[30px] md:text-[34px]">
               Mach deine eigene Erfahrung mit Invest4Kids
             </h2>
 
-            <p className="mt-[18px] max-w-[560px] font-medium text-[16px] leading-[23px] font-[300] text-white/90 sm:text-[18px] md:mt-[22px] md:text-[20px]">
+            <p className="mt-[18px] max-w-[560px] text-center md:text-start font-medium text-[18px] leading-[23px] md:font-[300] text-white/90 sm:text-[18px] md:mt-[22px] md:text-[20px]">
               Ob du schon lange überlegst oder ganz neu beim Thema
               Kinderinvestment bist: Unsere Beratung ist kostenlos, individuell
               und auf Augenhöhe – überzeuge dich einfach selbst.
             </p>
 
-            <div className="mt-[26px] md:mt-[34px]">
+            <div className="mt-[26px] justify-center md:justify-start md:mt-[34px]">
               <a
                 href="https://www.invest4kids-beratung.de/start/"
                 target="_blank"
