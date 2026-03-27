@@ -27,7 +27,7 @@ export default function ConsultationSection() {
         {/* Left content */}
         <div className="justify-self-start">
           <header className="max-w-111.5">
-            <h1 className="font-poppins text-[27px] leading-tight font-extrabold text-text-medium md:text-[34px] tracking-[0.02em]">
+            <h1 className="font-poppins text-[27px] leading-tight font-bold md:font-extrabold text-text-medium md:text-[34px] tracking-[0.02em]">
               Unsere Beratung
             </h1>
             <p className="mt-5.5 max-w-111 hyphens-auto font-poppins text-[18px] lg:text-[20px] leading-normal font-medium text-[#485563]">
