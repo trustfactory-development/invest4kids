@@ -123,7 +123,7 @@ export function MissionCtaSection() {
             <div className="flex items-center">
               {trustAvatars.map((avatar, index) => (
                 <div
-                  key={avatar}
+                  key={index}
                   className={index === 0 ? "relative" : "relative -ml-4"}
                 >
                   <Image

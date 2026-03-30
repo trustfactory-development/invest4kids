@@ -223,7 +223,7 @@ export function BenefitsCtaSection() {
               <div className="flex items-center">
                 {trustAvatars.map((avatar, index) => (
                   <div
-                    key={avatar}
+                    key={avatar.src}
                     className={index === 0 ? "relative" : "relative -ml-4"}
                   >
                     <Image
