@@ -14,6 +14,7 @@ import { MissionCtaSection } from "@/components/sections/mission-cta-section";
 import { ParentHesitationSection } from "@/components/sections/parent-hesitation-section";
 import { ProcessTimelineSection } from "@/components/sections/process-timeline-section";
 import { WishesFlowSection } from "@/components/sections/wishes-flow-section";
+import FixedSocialRail from "@/components/ui/FixedSocialRail";
 import headerLogo from "@/assets/images/header/invest4kids-logo.png";
 import flagDe from "@/assets/images/header/flag-de.svg";
 import flagGb from "@/assets/images/header/flag-gb.svg";
@@ -607,6 +608,7 @@ const calcResults = [
 export default function EtfFuerKinderPage() {
   return (
     <div className="etf-lp">
+      <FixedSocialRail />
       <LpHeader />
       <main>
 
